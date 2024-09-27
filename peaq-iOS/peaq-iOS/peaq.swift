@@ -7,6 +7,7 @@
 
 import Foundation
 import IrohaCrypto
+import Alamofire
 
 public class DIDDocumentCustomData: NSObject {
     
@@ -528,6 +529,119 @@ public class peaq: NSObject {
             return false
         }
         return false
+    }
+  
+    struct SignatureResponse: Decodable {
+        let signature: String
+    }
+    
+    // Function to create email signature
+    public func createEmailSignature(data: [String: Any], api_key: String, project_api_key: String, peaq_service_url: String) async throws -> String {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "APIKEY": api_key,
+            "P-APIKEY": project_api_key
+        ]
+        
+        print("Request URL: \(peaq_service_url)/v1/sign")
+        print("Headers: \(headers)")
+        print("Request data: \(data)")
+        
+        do {
+            let request = AF.request("\(peaq_service_url)/v1/sign",
+                                     method: .post,
+                                     parameters: data,
+                                     encoding: JSONEncoding.default,
+                                     headers: headers)
+            
+            let response = try await request.validate().serializingData().value
+            
+            print("Response received")
+            
+            if let responseString = String(data: response, encoding: .utf8) {
+                print("Raw response: \(responseString)")
+                
+                // Attempt to parse the JSON
+                if let json = try? JSONSerialization.jsonObject(with: response, options: []) as? [String: Any],
+                   let data = json["data"] as? [String: Any],
+                   let signature = data["signature"] as? String {
+                    return signature
+                } else {
+                    throw NSError(domain: "ParsingError", code: 0, userInfo: [description: "Failed to parse response JSON"])
+                }
+            } else {
+                throw NSError(domain: "NoDataError", code: 0, userInfo: [description: "No data received from the server"])
+            }
+        } catch {
+            print("Error in createEmailSignature: \(error)")
+            if let afError = error.asAFError {
+                print("AFError: \(afError)")
+                switch afError {
+                case .responseValidationFailed(let reason):
+                    print("Response validation failed: \(reason)")
+                case .responseSerializationFailed(let reason):
+                    print("Response serialization failed: \(reason)")
+                default:
+                    print("Other AFError: \(afError.localizedDescription)")
+                }
+            }
+            throw error
+        }
+    }
+    
+    // Function to register task completion
+    public func registerTaskCompletion(data: [String: Any], api_key: String, project_api_key: String, peaq_service_url: String) async throws -> String {
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "APIKEY": api_key,
+            "P-APIKEY": project_api_key
+        ]
+        
+        print("Request URL: \(peaq_service_url)/v1/data/store")
+        print("Headers: \(headers)")
+        print("Request data: \(data)")
+        
+        do {
+            let request = AF.request("\(peaq_service_url)/v1/data/store",
+                                     method: .post,
+                                     parameters: data,
+                                     encoding: JSONEncoding.default,
+                                     headers: headers)
+            
+            let response = try await request.validate().serializingData().value
+            
+            print("Response received")
+            
+            if let responseString = String(data: response, encoding: .utf8) {
+                print("Raw response: \(responseString)")
+                
+                // Attempt to parse the JSON
+                if let json = try? JSONSerialization.jsonObject(with: response, options: []) as? [String: Any],
+                   let message = json["message"] as? String {
+                    return message
+                } else {
+                    throw NSError(domain: "ParsingError", code: 0, userInfo: [description: "Failed to parse response JSON"])
+                }
+            } else {
+                throw NSError(domain: "NoDataError", code: 0, userInfo: [description: "No data received from the server"])
+            }
+        } catch {
+            print("Error in createEmailSignature: \(error)")
+            if let afError = error.asAFError {
+                print("AFError: \(afError)")
+                switch afError {
+                case .responseValidationFailed(let reason):
+                    print("Response validation failed: \(reason)")
+                case .responseSerializationFailed(let reason):
+                    print("Response serialization failed: \(reason)")
+                default:
+                    print("Other AFError: \(afError.localizedDescription)")
+                }
+            }
+            throw error
+        }
     }
     
     // TO DO

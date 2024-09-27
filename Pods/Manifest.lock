@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.9.1)
   - IrohaCrypto (0.10.0):
     - IrohaCrypto/BIP39 (= 0.10.0)
     - IrohaCrypto/blake2 (= 0.10.0)
@@ -34,6 +35,7 @@ PODS:
   - TweetNacl (1.0.2)
 
 DEPENDENCIES:
+  - Alamofire
   - IrohaCrypto
   - keccak.c
   - secp256k1.c
@@ -42,6 +44,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IrohaCrypto
     - keccak.c
     - scrypt.c
@@ -50,6 +53,7 @@ SPEC REPOS:
     - TweetNacl
 
 SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   IrohaCrypto: eb3772088068d8938198205b62b0a9dc5b8ce005
   keccak.c: 859583afdaccb4e4fcc0f0096064d101580313f4
   scrypt.c: b42ae06183251329d2b2c620c226fb541a4a3592
@@ -57,6 +61,6 @@ SPEC CHECKSUMS:
   SwiftProtobuf: 5e8349171e7c2f88f5b9e683cb3cb79d1dc780b3
   TweetNacl: 3abf4d1d2082b0114e7a67410e300892448951e6
 
-PODFILE CHECKSUM: 5eee442a508033857994f6c25f3ff8eb179a467e
+PODFILE CHECKSUM: e7bc668d4e9d65a7103df9d93a25af24d9aa273e
 
 COCOAPODS: 1.15.2

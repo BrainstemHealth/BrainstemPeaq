@@ -19,6 +19,7 @@ target 'peaq-iOS' do
   pod 'IrohaCrypto'
   pod 'keccak.c'
   pod 'SwiftProtobuf'
+  pod 'Alamofire'
 
   post_install do |installer|
       installer.generated_projects.each do |project|
