@@ -59,7 +59,9 @@ class ViewController: UIViewController {
     // custom task tag + identifier to track the specific task
     // it determines the item type on chain
     // Format: [<YOUR_CUSTOM_TASK_TAG>] + [-] + [a-zA-Z0-9-_]
-    let itemType = "TEST" + "-1234"
+    let itemType = "TEST-"
+    
+    var lastStoredItemType = "TEST-1234"
     
     //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -404,7 +406,8 @@ class ViewController: UIViewController {
                 if isSuccess {
                     if let signature = signData(machineSeed: machineSeed, data: data) {
                         do {
-                            try peaq.shared.storeMachineDataHash(ownerSeed: machineSeed, value: signature, key: itemType) { [self] str, err in
+                            lastStoredItemType = itemType + randomString(length: 6)
+                            try peaq.shared.storeMachineDataHash(ownerSeed: machineSeed, value: signature, key: lastStoredItemType) { [self] str, err in
                                 IndicatorManager.hideLoader()
                                 guard err == nil else {
                                     self.alert(err!.localizedDescription)
@@ -435,13 +438,14 @@ class ViewController: UIViewController {
         let eMail = "robin@brainstem.health"
         
         do {
+            lastStoredItemType = itemType + randomString(length: 6)
             try peaq.shared.createInstance(baseUrl: liveOrTest ? peaq_url : peaq_testnet_url, secretPhrase: machineSeed) { [self] isSuccess, err in
                 if isSuccess {
                     var response = ""
                     
                     Task {
                         let postdata = [
-                            "item_type": itemType,
+                            "item_type": lastStoredItemType,
                             "email": eMail,
                             "tag": tag
                         ]
@@ -452,8 +456,8 @@ class ViewController: UIViewController {
                     }
                     
                     if let signature = signData(machineSeed: machineSeed, data: data) {
-                        do {
-                            try peaq.shared.storeMachineDataHash(ownerSeed: machineSeed, value: signature, key: itemType) { [self] str, err in
+                        do {                            
+                            try peaq.shared.storeMachineDataHash(ownerSeed: machineSeed, value: signature, key: lastStoredItemType) { [self] str, err in
                                 IndicatorManager.hideLoader()
                                 guard err == nil else {
                                     self.alert(err!.localizedDescription)
@@ -487,7 +491,7 @@ class ViewController: UIViewController {
                 if isSuccess {
                     if let address = peaq.shared.getAddressFromMachineSeed(machineSeed: machineSeed) {
                         do {
-                            let data = try peaq.shared.fetchStorageData(address: address, key: itemType)
+                            let data = try peaq.shared.fetchStorageData(address: address, key: lastStoredItemType)
                             IndicatorManager.hideLoader()
                             lblGetData.isHidden = false
                             lblGetData.text = data?.stringValue
