@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     //MARK: - Properties
     let liveOrTest = false
     let peaq_url = "wss://peaq.api.onfinality.io/public-ws"
-    let peaq_testnet_url = "wss://wsspc1-qa.agung.peaq.network"
+    let peaq_testnet_url = "wss://wss-async.agung.peaq.network" //"wss://wsspc1-qa.agung.peaq.network"
     // dev URL: https://lift-off-campaign-service-jx-devbr.jx.peaq.network
     let peaq_service_url = "https://lift-off-campaign-service-jx-devbr.jx.peaq.network"
     
