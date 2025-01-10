@@ -268,28 +268,32 @@ class ViewController: UIViewController {
                             IndicatorManager.hideLoader()
                             alert(addressGetError?.localizedDescription ?? "Something went wrong.")
                             
-                        } else if let publicKey = publicKey, let address2 = address2, let address = address, let publicKey2 = publicKey2 {
-                            
-                            print("publicKey", publicKey)
-                            print("address", address)
-                            
-                            var signature = ""
-                            
-                            Task {
-                                let postdata = [
-                                    "email": eMail,
-                                    "did_address": address2,
-                                    "tag": tag
-                                ]
-                                
-                                signature = try await peaq.shared.createEmailSignature(data: postdata, api_key: api_key, project_api_key: project_api_key, peaq_service_url: peaq_service_url)
-                                
-                                self.lblCreateLiftOffIDSignature.text = signature
-                            }
-                            
-                            if let dIdDoc = peaq.shared.createDidDocument(ownerAddress: address, machineAddress: address2, machinePublicKey: publicKey2, customData: [DIDDocumentCustomData(id: "12", type: "custom_data", data: "{\"id\":1, \"name\":\"sensor 1\"}"), DIDDocumentCustomData(id:"#emailSignature", type: "emailSignature", data: signature)]) {
-                                do {
-                                    try peaq.shared.createDid(name: "did:peaq:\(address)", value: dIdDoc) { hashKey, err in
+                        } 
+                        else if let publicKey = publicKey, let address2 = address2, let address = address, let publicKey2 = publicKey2
+                        {
+                          
+                          print("publicKey", publicKey)
+                          print("address", address)
+                          
+                          var signature = ""
+                          
+                          Task
+                          {
+                              let postdata = [
+                                  "email": eMail,
+                                  "did_address": address2,
+                                  "tag": tag
+                              ]
+                              
+                              signature = try await peaq.shared.createEmailSignature(data: postdata, api_key: api_key, project_api_key: project_api_key, peaq_service_url: peaq_service_url)
+                              print("EMAIL SIGNATURE", signature)
+                              self.lblCreateLiftOffIDSignature.text = signature
+                            print("createDidDocument SIGNATURE: \(signature)")
+                            if let dIdDoc = peaq.shared.createDidDocument(ownerAddress: address, machineAddress: address2, machinePublicKey: publicKey2, customData: [DIDDocumentCustomData(id: "12", type: "custom_data", data: "{\"id\":1, \"name\":\"sensor 1\"}"), DIDDocumentCustomData(id:"#emailSignature", type: "emailSignature", data: signature)])
+                            {
+                              do
+                              {
+                                try peaq.shared.createDid(name: "did:peaq:\(address)", value: dIdDoc) { hashKey, err in
                                         
                                         IndicatorManager.hideLoader()
                                         guard err == nil else {
@@ -307,6 +311,8 @@ class ViewController: UIViewController {
                                 IndicatorManager.hideLoader()
                                 alert("Something went wrong.")
                             }
+                          }//task
+                            
                         } else {
                             IndicatorManager.hideLoader()
                             alert("Something went wrong.")
