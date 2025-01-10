@@ -775,7 +775,7 @@ public class peaq: NSObject {
             let minimumPeriodOperation: StringScaleMapper<Moment> = try fetchPrimitiveConstant(with: path).map(to: StringScaleMapper<Moment>.self)
             let minimumPeriod = minimumPeriodOperation.value
 
-            let blockTime = minimumPeriod
+            let blockTime = 6000 //minimumPeriod 
 
             let unmappedPeriod = (Self.mortalPeriod / UInt64(blockTime)) + UInt64(Self.maxFinalityLag)
 
