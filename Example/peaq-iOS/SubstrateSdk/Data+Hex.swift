@@ -1,5 +1,5 @@
 import Foundation
-
+//import NovaCrypto
 
 public extension Data {
     func toHex(includePrefix: Bool = false) -> String {
@@ -16,4 +16,3 @@ public extension Data {
         }
     }
 }
-

@@ -1,4 +1,5 @@
 import Foundation
+//import NovaCrypto
 //import IrohaCrypto
 
 public protocol KeystoreInfoFactoryProtocol {
@@ -29,9 +30,11 @@ public final class KeystoreInfoFactory: KeystoreInfoFactoryProtocol {
             chainType = nil
         }
 
-        return KeystoreInfo(address: definition.address,
-                            chainType: chainType,
-                            secretType: secretType,
-                            meta: definition.meta)
+        return KeystoreInfo(
+            address: definition.address,
+            chainType: chainType,
+            secretType: secretType,
+            meta: definition.meta
+        )
     }
 }

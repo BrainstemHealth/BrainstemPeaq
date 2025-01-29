@@ -1,4 +1,5 @@
 import Foundation
+//import NovaCrypto
 //import IrohaCrypto
 
 public struct BIP32KeypairFactory {
@@ -10,7 +11,7 @@ public struct BIP32KeypairFactory {
         _ masterKeypair: BIP32ExtendedKeypair,
         chainIndexList: [Chaincode]
     ) throws -> IRCryptoKeypairProtocol {
-        let childExtendedKeypair = try chainIndexList.reduce(masterKeypair) { (parentKeypair, chainIndex) in
+        let childExtendedKeypair = try chainIndexList.reduce(masterKeypair) { parentKeypair, chainIndex in
             try internalFactory.createKeypairFrom(parentKeypair, chaincode: chainIndex)
         }
 
@@ -19,8 +20,10 @@ public struct BIP32KeypairFactory {
 }
 
 extension BIP32KeypairFactory: KeypairFactoryProtocol {
-    public func createKeypairFromSeed(_ seed: Data,
-                                      chaincodeList: [Chaincode]) throws -> IRCryptoKeypairProtocol {
+    public func createKeypairFromSeed(
+        _ seed: Data,
+        chaincodeList: [Chaincode]
+    ) throws -> IRCryptoKeypairProtocol {
         let masterKeypair = try internalFactory.deriveFromSeed(seed)
 
         return try deriveChildKeypairFromMaster(

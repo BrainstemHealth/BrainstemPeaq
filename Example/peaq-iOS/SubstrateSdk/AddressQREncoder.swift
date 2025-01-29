@@ -1,4 +1,5 @@
 import Foundation
+//import NovaCrypto
 //import IrohaCrypto
 
 public protocol AddressQREncodable {

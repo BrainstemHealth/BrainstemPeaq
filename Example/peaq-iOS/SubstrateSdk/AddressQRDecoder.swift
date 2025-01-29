@@ -1,5 +1,5 @@
 import Foundation
-//import IrohaCrypto
+//import NovaCrypto
 
 public protocol AddressQRDecodable {
     func decode(data: Data) throws -> String
@@ -22,8 +22,8 @@ open class AddressQRDecoder: AddressQRDecodable {
                 format: addressFormat,
                 addressFactory: addressFactory
             ) else {
-                throw AddressQRCoderError.invalidAddress
-            }
+            throw AddressQRCoderError.invalidAddress
+        }
 
         return addressString
     }

@@ -1,5 +1,5 @@
 import Foundation
-
+//import Starscream
 
 public protocol WebSocketConnectionFactoryProtocol {
     func createConnection(

@@ -1,6 +1,7 @@
 import CommonCrypto
+//import NovaCrypto
 //import IrohaCrypto
-
+//import BigInt
 
 public enum BIP32KeyFactoryError: Error {
     case invalidChildKey
@@ -98,7 +99,7 @@ extension BIP32KeyFactory: BIP32KeyFactoryProtocol {
             throw BIP32KeyFactoryError.invalidChildKey
         }
 
-        var privateKeyData  = privateKeyInt.serialize()
+        var privateKeyData = privateKeyInt.serialize()
 
         let keyLength = SECPrivateKey.length()
 

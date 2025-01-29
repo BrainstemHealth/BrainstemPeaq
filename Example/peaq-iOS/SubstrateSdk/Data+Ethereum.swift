@@ -1,4 +1,6 @@
 import Foundation
+//import keccak
+//import NovaCrypto
 //import IrohaCrypto
 
 public enum EthereumPubKeyToAddressError: Error {

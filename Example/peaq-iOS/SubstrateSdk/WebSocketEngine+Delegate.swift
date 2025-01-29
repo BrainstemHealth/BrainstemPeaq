@@ -1,5 +1,5 @@
 import Foundation
-
+//import Starscream
 
 extension WebSocketEngine: WebSocketDelegate {
     public func didReceive(event: WebSocketEvent, client _: WebSocket) {
@@ -104,7 +104,7 @@ extension WebSocketEngine: WebSocketDelegate {
         logger?.debug("(\(chainName):\(selectedURL)) connection established")
 
         updateReconnectionAttempts(0, for: selectedURL)
-        changeState(.connected)
+        changeState(.connected(url: selectedURL))
         sendAllPendingRequests()
 
         schedulePingIfNeeded()

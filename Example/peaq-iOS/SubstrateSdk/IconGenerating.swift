@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+//import NovaCrypto
 //import IrohaCrypto
 
 public protocol DrawableIcon {

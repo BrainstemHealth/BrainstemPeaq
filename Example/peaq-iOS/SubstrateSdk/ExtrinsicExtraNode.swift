@@ -5,13 +5,29 @@ public enum ExtrinsicExtraNodeError: Error {
 }
 
 public class ExtrinsicExtraNode: Node {
+    static let defaultExtensions: [TransactionExtensionCoding] = [
+        TransactionExtension.CheckMortality.getTransactionExtensionCoder(),
+        TransactionExtension.CheckNonce.getTransactionExtensionCoder(),
+        TransactionExtension.ChargeTransactionPayment.getTransactionExtensionCoder(),
+        CheckMetadataHashCoder()
+    ]
+
     public var typeName: String { GenericType.extrinsicExtra.name }
     public let runtimeMetadata: RuntimeMetadataProtocol
-    public let customExtensions: [ExtrinsicExtensionCoder]
+    public let customExtensions: [TransactionExtensionCoding]
 
-    public init(runtimeMetadata: RuntimeMetadataProtocol, customExtensions: [ExtrinsicExtensionCoder]) {
+    public init(
+        runtimeMetadata: RuntimeMetadataProtocol,
+        customExtensions: [TransactionExtensionCoding]
+    ) {
         self.runtimeMetadata = runtimeMetadata
         self.customExtensions = customExtensions
+    }
+
+    private func getCoders() -> [String: TransactionExtensionCoding] {
+        (Self.defaultExtensions + customExtensions).reduce(into: [String: TransactionExtensionCoding]()) {
+            $0[$1.txExtensionId] = $1
+        }
     }
 
     public func accept(encoder: DynamicScaleEncoding, value: JSON) throws {
@@ -19,55 +35,32 @@ public class ExtrinsicExtraNode: Node {
             throw DynamicScaleEncoderError.dictExpected(json: value)
         }
 
+        let coders = getCoders()
+
         for checkString in runtimeMetadata.getSignedExtensions() {
-            let check = ExtrinsicCheck(rawValue: checkString)
-
-            switch check {
-            case .mortality:
-                guard let era = params[KnownExtrinsicExtraKey.era] else {
-                    throw ExtrinsicExtraNodeError.invalidParams
-                }
-
-                try encoder.append(json: era, type: GenericType.era.name)
-            case .nonce:
-                guard let nonce = params[KnownExtrinsicExtraKey.nonce] else {
-                    throw ExtrinsicExtraNodeError.invalidParams
-                }
-
-                try encoder.appendCompact(json: nonce, type: KnownType.index.name)
-            case .txPayment:
-                guard let tip = params[KnownExtrinsicExtraKey.tip] else {
-                    throw ExtrinsicExtraNodeError.invalidParams
-                }
-
-                try encoder.appendCompact(json: tip, type: KnownType.balance.name)
-            default:
-                if let customExtension = customExtensions.first(where: { $0.name == checkString }) {
-                    try customExtension.encodeAdditionalExtra(from: params, encoder: encoder)
-                }
+            if let includer = coders[checkString] {
+                try includer.encodeIncludedInExtrinsic(from: params, encoder: encoder)
+            } else if
+                let extensionParams = params[checkString],
+                let type = runtimeMetadata.getSignedExtensionType(for: checkString) {
+                try encoder.append(json: extensionParams, type: type)
+            } else if
+                let type = runtimeMetadata.getSignedExtensionType(for: checkString),
+                encoder.canEncodeOptional(for: type) {
+                try encoder.append(json: JSON.null, type: type)
             }
         }
     }
 
     public func accept(decoder: DynamicScaleDecoding) throws -> JSON {
-        let extra = try runtimeMetadata.getSignedExtensions().reduce(into: [String: JSON]()) { (result, item) in
-                let check = ExtrinsicCheck(rawValue: item)
+        let coders = getCoders()
 
-                switch check {
-                case .mortality:
-                    let era = try decoder.read(type: GenericType.era.rawValue)
-                    result[KnownExtrinsicExtraKey.era] = era
-                case .nonce:
-                    let nonce = try decoder.readCompact(type: KnownType.index.rawValue)
-                    result[KnownExtrinsicExtraKey.nonce] = nonce
-                case .txPayment:
-                    let tip = try decoder.readCompact(type: KnownType.balance.rawValue)
-                    result[KnownExtrinsicExtraKey.tip] = tip
-                default:
-                    if let customExtension = customExtensions.first(where: { $0.name == item }) {
-                        try customExtension.decodeAdditionalExtra(to: &result, decoder: decoder)
-                    }
-                }
+        let extra = try runtimeMetadata.getSignedExtensions().reduce(into: [String: JSON]()) { result, item in
+            if let coder = coders[item] {
+                try coder.decodeIncludedInExtrinsic(to: &result, decoder: decoder)
+            } else if let type = runtimeMetadata.getSignedExtensionType(for: item) {
+                result[item] = try decoder.read(type: type)
+            }
         }
 
         return .dictionaryValue(extra)

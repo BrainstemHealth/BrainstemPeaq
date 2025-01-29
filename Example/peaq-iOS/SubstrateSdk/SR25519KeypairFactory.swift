@@ -1,4 +1,5 @@
 import Foundation
+//import NovaCrypto
 //import IrohaCrypto
 
 public struct SR25519KeypairFactory: DerivableKeypairFactoryProtocol {
@@ -6,22 +7,28 @@ public struct SR25519KeypairFactory: DerivableKeypairFactoryProtocol {
 
     public init() {}
 
-    public func createKeypairFromSeed(_ seed: Data,
-                                      chaincodeList: [Chaincode]) throws -> IRCryptoKeypairProtocol {
+    public func createKeypairFromSeed(
+        _ seed: Data,
+        chaincodeList: [Chaincode]
+    ) throws -> IRCryptoKeypairProtocol {
         let masterKeypair = try internalFactory.createKeypair(fromSeed: seed)
 
-        let parentKeypair = IRCryptoKeypair(publicKey: masterKeypair.publicKey(),
-                                            privateKey: masterKeypair.privateKey())
+        let parentKeypair = IRCryptoKeypair(
+            publicKey: masterKeypair.publicKey(),
+            privateKey: masterKeypair.privateKey()
+        )
         return try deriveChildKeypairFromParent(parentKeypair, chaincodeList: chaincodeList)
     }
 
-    public func deriveChildKeypairFromParent(_ keypair: IRCryptoKeypairProtocol,
-                                             chaincodeList: [Chaincode]) throws -> IRCryptoKeypairProtocol {
+    public func deriveChildKeypairFromParent(
+        _ keypair: IRCryptoKeypairProtocol,
+        chaincodeList: [Chaincode]
+    ) throws -> IRCryptoKeypairProtocol {
         let privateKey = try SNPrivateKey(rawData: keypair.privateKey().rawData())
         let publicKey = try SNPublicKey(rawData: keypair.publicKey().rawData())
         let snKeypair: SNKeypairProtocol = SNKeypair(privateKey: privateKey, publicKey: publicKey)
 
-        let childKeypair = try chaincodeList.reduce(snKeypair) { (keypair, chaincode) in
+        let childKeypair = try chaincodeList.reduce(snKeypair) { keypair, chaincode in
             switch chaincode.type {
             case .soft:
                 return try internalFactory.createKeypairSoft(keypair, chaincode: chaincode.data)
@@ -30,7 +37,9 @@ public struct SR25519KeypairFactory: DerivableKeypairFactoryProtocol {
             }
         }
 
-        return IRCryptoKeypair(publicKey: childKeypair.publicKey(),
-                               privateKey: childKeypair.privateKey())
+        return IRCryptoKeypair(
+            publicKey: childKeypair.publicKey(),
+            privateKey: childKeypair.privateKey()
+        )
     }
 }

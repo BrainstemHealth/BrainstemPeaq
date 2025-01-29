@@ -459,6 +459,88 @@
 		8B9169402D4A3C6000A31AB6 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 8B91693F2D4A3C6000A31AB6 /* SwiftProtobuf */; };
 		8B9169422D4A3C6000A31AB6 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9169412D4A3C6000A31AB6 /* SwiftProtobufPluginLibrary */; };
 		8B9169442D4A3C6000A31AB6 /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9169432D4A3C6000A31AB6 /* protoc-gen-swift */; };
+		8B91694C2D4A5BBF00A31AB6 /* CheckTxVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169452D4A5BBF00A31AB6 /* CheckTxVersion.swift */; };
+		8B91694D2D4A5BBF00A31AB6 /* CheckSpecVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169462D4A5BBF00A31AB6 /* CheckSpecVersion.swift */; };
+		8B91694E2D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169472D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift */; };
+		8B91694F2D4A5BBF00A31AB6 /* CheckMortality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169482D4A5BBF00A31AB6 /* CheckMortality.swift */; };
+		8B9169502D4A5BBF00A31AB6 /* CheckGenesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169492D4A5BBF00A31AB6 /* CheckGenesis.swift */; };
+		8B9169512D4A5BBF00A31AB6 /* CheckMetadataHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91694A2D4A5BBF00A31AB6 /* CheckMetadataHash.swift */; };
+		8B9169522D4A5BBF00A31AB6 /* CheckNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91694B2D4A5BBF00A31AB6 /* CheckNonce.swift */; };
+		8B9169582D4A5BD700A31AB6 /* RuntimeAugmentationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169532D4A5BD600A31AB6 /* RuntimeAugmentationFactory.swift */; };
+		8B9169592D4A5BD700A31AB6 /* RuntimeAugmentationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169542D4A5BD600A31AB6 /* RuntimeAugmentationResult.swift */; };
+		8B91695A2D4A5BD700A31AB6 /* RuntimeApiMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169552D4A5BD600A31AB6 /* RuntimeApiMetadata.swift */; };
+		8B91695B2D4A5BD700A31AB6 /* RuntimeApiMetadataMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169562D4A5BD700A31AB6 /* RuntimeApiMetadataMethod.swift */; };
+		8B91695C2D4A5BD700A31AB6 /* RuntimeApiQueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169572D4A5BD700A31AB6 /* RuntimeApiQueryResult.swift */; };
+		8B91695F2D4A5BF000A31AB6 /* DefaultTransactionExtensionCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91695D2D4A5BF000A31AB6 /* DefaultTransactionExtensionCoder.swift */; };
+		8B9169602D4A5BF000A31AB6 /* DynamicScaleEncodingFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91695E2D4A5BF000A31AB6 /* DynamicScaleEncodingFactoryProtocol.swift */; };
+		8B9169732D4A5C3300A31AB6 /* PostV14PalletMetadataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169612D4A5C3200A31AB6 /* PostV14PalletMetadataProtocol.swift */; };
+		8B9169742D4A5C3300A31AB6 /* ExtrinsicMetadataV15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169622D4A5C3200A31AB6 /* ExtrinsicMetadataV15.swift */; };
+		8B9169752D4A5C3300A31AB6 /* ParitySignerSignaturePayloadFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169632D4A5C3200A31AB6 /* ParitySignerSignaturePayloadFactory.swift */; };
+		8B9169762D4A5C3300A31AB6 /* MultiSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169642D4A5C3200A31AB6 /* MultiSignature.swift */; };
+		8B9169772D4A5C3300A31AB6 /* RuntimeMetadataSearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169652D4A5C3200A31AB6 /* RuntimeMetadataSearchEngine.swift */; };
+		8B9169782D4A5C3300A31AB6 /* PostV14RuntimeMetadataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169662D4A5C3200A31AB6 /* PostV14RuntimeMetadataProtocol.swift */; };
+		8B9169792D4A5C3300A31AB6 /* PostV14ExtrinsicMetadataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169672D4A5C3200A31AB6 /* PostV14ExtrinsicMetadataProtocol.swift */; };
+		8B91697A2D4A5C3300A31AB6 /* ExtrinsicSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169682D4A5C3200A31AB6 /* ExtrinsicSignature.swift */; };
+		8B91697B2D4A5C3300A31AB6 /* RuntimeTypeSearchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169692D4A5C3200A31AB6 /* RuntimeTypeSearchMode.swift */; };
+		8B91697C2D4A5C3300A31AB6 /* ExtrinsicSignatureParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696A2D4A5C3200A31AB6 /* ExtrinsicSignatureParams.swift */; };
+		8B91697D2D4A5C3300A31AB6 /* VerifySignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696B2D4A5C3200A31AB6 /* VerifySignature.swift */; };
+		8B91697E2D4A5C3300A31AB6 /* ExtrinsicSignaturePayloadFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696C2D4A5C3300A31AB6 /* ExtrinsicSignaturePayloadFactory.swift */; };
+		8B91697F2D4A5C3300A31AB6 /* PalletMetadataV15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696D2D4A5C3300A31AB6 /* PalletMetadataV15.swift */; };
+		8B9169802D4A5C3300A31AB6 /* TransactionExtensionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696E2D4A5C3300A31AB6 /* TransactionExtensionId.swift */; };
+		8B9169812D4A5C3300A31AB6 /* RuntimeMetadataV15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91696F2D4A5C3300A31AB6 /* RuntimeMetadataV15.swift */; };
+		8B9169822D4A5C3300A31AB6 /* ExtrinsicSignatureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169702D4A5C3300A31AB6 /* ExtrinsicSignatureFactory.swift */; };
+		8B9169832D4A5C3300A31AB6 /* TransactionExtending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169712D4A5C3300A31AB6 /* TransactionExtending.swift */; };
+		8B9169842D4A5C3300A31AB6 /* TransactionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169722D4A5C3300A31AB6 /* TransactionExtension.swift */; };
+		8B9169872D4A5C7100A31AB6 /* ExtrinsicBuilderSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169852D4A5C7100A31AB6 /* ExtrinsicBuilderSnapshot.swift */; };
+		8B9169882D4A5C7100A31AB6 /* ExtrinsicBatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169862D4A5C7100A31AB6 /* ExtrinsicBatch.swift */; };
+		8B9169C92D4A615500A31AB6 /* CoreDataCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169892D4A615500A31AB6 /* CoreDataCommon.swift */; };
+		8B9169CA2D4A615500A31AB6 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91698A2D4A615500A31AB6 /* CoreDataService.swift */; };
+		8B9169CB2D4A615500A31AB6 /* CoreDataServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91698B2D4A615500A31AB6 /* CoreDataServiceConfiguration.swift */; };
+		8B9169CC2D4A615500A31AB6 /* DataProviderPrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91698D2D4A615500A31AB6 /* DataProviderPrimitives.swift */; };
+		8B9169CD2D4A615500A31AB6 /* AnyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91698F2D4A615500A31AB6 /* AnyDataProvider.swift */; };
+		8B9169CE2D4A615500A31AB6 /* AnyDataProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169902D4A615500A31AB6 /* AnyDataProviderSource.swift */; };
+		8B9169CF2D4A615500A31AB6 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169912D4A615500A31AB6 /* DataProvider.swift */; };
+		8B9169D02D4A615500A31AB6 /* DataProvider+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169922D4A615500A31AB6 /* DataProvider+Protocol.swift */; };
+		8B9169D12D4A615500A31AB6 /* DataProvider+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169932D4A615500A31AB6 /* DataProvider+Trigger.swift */; };
+		8B9169D22D4A615500A31AB6 /* DataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169942D4A615500A31AB6 /* DataProviderError.swift */; };
+		8B9169D32D4A615500A31AB6 /* DataProviderObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169952D4A615500A31AB6 /* DataProviderObserver.swift */; };
+		8B9169D42D4A615500A31AB6 /* DataProviderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169962D4A615500A31AB6 /* DataProviderProtocols.swift */; };
+		8B9169D52D4A615500A31AB6 /* ListDifferenceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169982D4A615500A31AB6 /* ListDifferenceCalculator.swift */; };
+		8B9169D62D4A615500A31AB6 /* SectionedListDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169992D4A615500A31AB6 /* SectionedListDifference.swift */; };
+		8B9169D72D4A615500A31AB6 /* CoreDataContextObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91699B2D4A615500A31AB6 /* CoreDataContextObservable.swift */; };
+		8B9169D82D4A615500A31AB6 /* CoreDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91699C2D4A615500A31AB6 /* CoreDataMapper.swift */; };
+		8B9169D92D4A615500A31AB6 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91699D2D4A615500A31AB6 /* CoreDataRepository.swift */; };
+		8B9169DA2D4A615500A31AB6 /* CoreDataRepository+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91699E2D4A615500A31AB6 /* CoreDataRepository+Async.swift */; };
+		8B9169DB2D4A615500A31AB6 /* CoreDataRepository+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91699F2D4A615500A31AB6 /* CoreDataRepository+Protocol.swift */; };
+		8B9169DC2D4A615500A31AB6 /* AnyDataProviderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A12D4A615500A31AB6 /* AnyDataProviderRepository.swift */; };
+		8B9169DD2D4A615500A31AB6 /* AnyDataProviderRepositoryObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A22D4A615500A31AB6 /* AnyDataProviderRepositoryObservable.swift */; };
+		8B9169DE2D4A615500A31AB6 /* RepositoryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A32D4A615500A31AB6 /* RepositoryObserver.swift */; };
+		8B9169DF2D4A615500A31AB6 /* RepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A42D4A615500A31AB6 /* RepositoryProtocols.swift */; };
+		8B9169E02D4A615500A31AB6 /* AnySingleValueProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A62D4A615500A31AB6 /* AnySingleValueProviderSource.swift */; };
+		8B9169E12D4A615500A31AB6 /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A72D4A615500A31AB6 /* SingleValueProvider.swift */; };
+		8B9169E22D4A615500A31AB6 /* SingleValueProvider+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A82D4A615500A31AB6 /* SingleValueProvider+Protocol.swift */; };
+		8B9169E32D4A615500A31AB6 /* SingleValueProvider+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169A92D4A615500A31AB6 /* SingleValueProvider+Trigger.swift */; };
+		8B9169E42D4A615500A31AB6 /* SingleValueProviderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169AA2D4A615500A31AB6 /* SingleValueProviderProtocols.swift */; };
+		8B9169E52D4A615500A31AB6 /* AnyStreamableProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169AC2D4A615500A31AB6 /* AnyStreamableProviderSource.swift */; };
+		8B9169E62D4A615500A31AB6 /* StreamableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169AD2D4A615500A31AB6 /* StreamableProvider.swift */; };
+		8B9169E72D4A615600A31AB6 /* StreamableProviderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169AE2D4A615500A31AB6 /* StreamableProviderProtocols.swift */; };
+		8B9169E82D4A615600A31AB6 /* DataProviderTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B02D4A615500A31AB6 /* DataProviderTrigger.swift */; };
+		8B9169E92D4A615600A31AB6 /* BaseOperationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B32D4A615500A31AB6 /* BaseOperationExtensions.swift */; };
+		8B9169EA2D4A615600A31AB6 /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B42D4A615500A31AB6 /* DispatchQueueHelper.swift */; };
+		8B9169EB2D4A615600A31AB6 /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B52D4A615500A31AB6 /* EndpointBuilder.swift */; };
+		8B9169EC2D4A615600A31AB6 /* AsyncClosureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B72D4A615500A31AB6 /* AsyncClosureOperation.swift */; };
+		8B9169ED2D4A615600A31AB6 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B82D4A615500A31AB6 /* BaseOperation.swift */; };
+		8B9169EE2D4A615600A31AB6 /* ClosureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169B92D4A615500A31AB6 /* ClosureOperation.swift */; };
+		8B9169EF2D4A615600A31AB6 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169BB2D4A615500A31AB6 /* NetworkConstants.swift */; };
+		8B9169F02D4A615600A31AB6 /* NetworkDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169BC2D4A615500A31AB6 /* NetworkDataError.swift */; };
+		8B9169F12D4A615600A31AB6 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169BD2D4A615500A31AB6 /* NetworkOperation.swift */; };
+		8B9169F22D4A615600A31AB6 /* NetworkOperationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169BE2D4A615500A31AB6 /* NetworkOperationHelper.swift */; };
+		8B9169F32D4A615600A31AB6 /* NetworkRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169BF2D4A615500A31AB6 /* NetworkRequestFactory.swift */; };
+		8B9169F42D4A615600A31AB6 /* NetworkRequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169C02D4A615500A31AB6 /* NetworkRequestModifier.swift */; };
+		8B9169F52D4A615600A31AB6 /* NetworkResultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169C12D4A615500A31AB6 /* NetworkResultFactory.swift */; };
+		8B9169F62D4A615600A31AB6 /* CancellableCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169C32D4A615500A31AB6 /* CancellableCall.swift */; };
+		8B9169F72D4A615600A31AB6 /* CompoundOperationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169C42D4A615500A31AB6 /* CompoundOperationWrapper.swift */; };
+		8B9169F82D4A615600A31AB6 /* OperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9169C52D4A615500A31AB6 /* OperationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1030,6 +1112,88 @@
 		8B9167782D4A233700A31AB6 /* XXH64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XXH64.swift; sourceTree = "<group>"; };
 		8B9167792D4A233700A31AB6 /* xxHash-Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "xxHash-Common.swift"; sourceTree = "<group>"; };
 		8B91677B2D4A233700A31AB6 /* peaq_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peaq_iOS.h; sourceTree = "<group>"; };
+		8B9169452D4A5BBF00A31AB6 /* CheckTxVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTxVersion.swift; sourceTree = "<group>"; };
+		8B9169462D4A5BBF00A31AB6 /* CheckSpecVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSpecVersion.swift; sourceTree = "<group>"; };
+		8B9169472D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeTransactionPayment.swift; sourceTree = "<group>"; };
+		8B9169482D4A5BBF00A31AB6 /* CheckMortality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMortality.swift; sourceTree = "<group>"; };
+		8B9169492D4A5BBF00A31AB6 /* CheckGenesis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckGenesis.swift; sourceTree = "<group>"; };
+		8B91694A2D4A5BBF00A31AB6 /* CheckMetadataHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMetadataHash.swift; sourceTree = "<group>"; };
+		8B91694B2D4A5BBF00A31AB6 /* CheckNonce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckNonce.swift; sourceTree = "<group>"; };
+		8B9169532D4A5BD600A31AB6 /* RuntimeAugmentationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeAugmentationFactory.swift; sourceTree = "<group>"; };
+		8B9169542D4A5BD600A31AB6 /* RuntimeAugmentationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeAugmentationResult.swift; sourceTree = "<group>"; };
+		8B9169552D4A5BD600A31AB6 /* RuntimeApiMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeApiMetadata.swift; sourceTree = "<group>"; };
+		8B9169562D4A5BD700A31AB6 /* RuntimeApiMetadataMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeApiMetadataMethod.swift; sourceTree = "<group>"; };
+		8B9169572D4A5BD700A31AB6 /* RuntimeApiQueryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeApiQueryResult.swift; sourceTree = "<group>"; };
+		8B91695D2D4A5BF000A31AB6 /* DefaultTransactionExtensionCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTransactionExtensionCoder.swift; sourceTree = "<group>"; };
+		8B91695E2D4A5BF000A31AB6 /* DynamicScaleEncodingFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicScaleEncodingFactoryProtocol.swift; sourceTree = "<group>"; };
+		8B9169612D4A5C3200A31AB6 /* PostV14PalletMetadataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostV14PalletMetadataProtocol.swift; sourceTree = "<group>"; };
+		8B9169622D4A5C3200A31AB6 /* ExtrinsicMetadataV15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicMetadataV15.swift; sourceTree = "<group>"; };
+		8B9169632D4A5C3200A31AB6 /* ParitySignerSignaturePayloadFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParitySignerSignaturePayloadFactory.swift; sourceTree = "<group>"; };
+		8B9169642D4A5C3200A31AB6 /* MultiSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSignature.swift; sourceTree = "<group>"; };
+		8B9169652D4A5C3200A31AB6 /* RuntimeMetadataSearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeMetadataSearchEngine.swift; sourceTree = "<group>"; };
+		8B9169662D4A5C3200A31AB6 /* PostV14RuntimeMetadataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostV14RuntimeMetadataProtocol.swift; sourceTree = "<group>"; };
+		8B9169672D4A5C3200A31AB6 /* PostV14ExtrinsicMetadataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostV14ExtrinsicMetadataProtocol.swift; sourceTree = "<group>"; };
+		8B9169682D4A5C3200A31AB6 /* ExtrinsicSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicSignature.swift; sourceTree = "<group>"; };
+		8B9169692D4A5C3200A31AB6 /* RuntimeTypeSearchMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeTypeSearchMode.swift; sourceTree = "<group>"; };
+		8B91696A2D4A5C3200A31AB6 /* ExtrinsicSignatureParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicSignatureParams.swift; sourceTree = "<group>"; };
+		8B91696B2D4A5C3200A31AB6 /* VerifySignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifySignature.swift; sourceTree = "<group>"; };
+		8B91696C2D4A5C3300A31AB6 /* ExtrinsicSignaturePayloadFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicSignaturePayloadFactory.swift; sourceTree = "<group>"; };
+		8B91696D2D4A5C3300A31AB6 /* PalletMetadataV15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalletMetadataV15.swift; sourceTree = "<group>"; };
+		8B91696E2D4A5C3300A31AB6 /* TransactionExtensionId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionExtensionId.swift; sourceTree = "<group>"; };
+		8B91696F2D4A5C3300A31AB6 /* RuntimeMetadataV15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeMetadataV15.swift; sourceTree = "<group>"; };
+		8B9169702D4A5C3300A31AB6 /* ExtrinsicSignatureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicSignatureFactory.swift; sourceTree = "<group>"; };
+		8B9169712D4A5C3300A31AB6 /* TransactionExtending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionExtending.swift; sourceTree = "<group>"; };
+		8B9169722D4A5C3300A31AB6 /* TransactionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionExtension.swift; sourceTree = "<group>"; };
+		8B9169852D4A5C7100A31AB6 /* ExtrinsicBuilderSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicBuilderSnapshot.swift; sourceTree = "<group>"; };
+		8B9169862D4A5C7100A31AB6 /* ExtrinsicBatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrinsicBatch.swift; sourceTree = "<group>"; };
+		8B9169892D4A615500A31AB6 /* CoreDataCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCommon.swift; sourceTree = "<group>"; };
+		8B91698A2D4A615500A31AB6 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		8B91698B2D4A615500A31AB6 /* CoreDataServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataServiceConfiguration.swift; sourceTree = "<group>"; };
+		8B91698D2D4A615500A31AB6 /* DataProviderPrimitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderPrimitives.swift; sourceTree = "<group>"; };
+		8B91698F2D4A615500A31AB6 /* AnyDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDataProvider.swift; sourceTree = "<group>"; };
+		8B9169902D4A615500A31AB6 /* AnyDataProviderSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDataProviderSource.swift; sourceTree = "<group>"; };
+		8B9169912D4A615500A31AB6 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8B9169922D4A615500A31AB6 /* DataProvider+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Protocol.swift"; sourceTree = "<group>"; };
+		8B9169932D4A615500A31AB6 /* DataProvider+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Trigger.swift"; sourceTree = "<group>"; };
+		8B9169942D4A615500A31AB6 /* DataProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderError.swift; sourceTree = "<group>"; };
+		8B9169952D4A615500A31AB6 /* DataProviderObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderObserver.swift; sourceTree = "<group>"; };
+		8B9169962D4A615500A31AB6 /* DataProviderProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderProtocols.swift; sourceTree = "<group>"; };
+		8B9169982D4A615500A31AB6 /* ListDifferenceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDifferenceCalculator.swift; sourceTree = "<group>"; };
+		8B9169992D4A615500A31AB6 /* SectionedListDifference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedListDifference.swift; sourceTree = "<group>"; };
+		8B91699B2D4A615500A31AB6 /* CoreDataContextObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContextObservable.swift; sourceTree = "<group>"; };
+		8B91699C2D4A615500A31AB6 /* CoreDataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMapper.swift; sourceTree = "<group>"; };
+		8B91699D2D4A615500A31AB6 /* CoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		8B91699E2D4A615500A31AB6 /* CoreDataRepository+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRepository+Async.swift"; sourceTree = "<group>"; };
+		8B91699F2D4A615500A31AB6 /* CoreDataRepository+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRepository+Protocol.swift"; sourceTree = "<group>"; };
+		8B9169A12D4A615500A31AB6 /* AnyDataProviderRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDataProviderRepository.swift; sourceTree = "<group>"; };
+		8B9169A22D4A615500A31AB6 /* AnyDataProviderRepositoryObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDataProviderRepositoryObservable.swift; sourceTree = "<group>"; };
+		8B9169A32D4A615500A31AB6 /* RepositoryObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryObserver.swift; sourceTree = "<group>"; };
+		8B9169A42D4A615500A31AB6 /* RepositoryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocols.swift; sourceTree = "<group>"; };
+		8B9169A62D4A615500A31AB6 /* AnySingleValueProviderSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnySingleValueProviderSource.swift; sourceTree = "<group>"; };
+		8B9169A72D4A615500A31AB6 /* SingleValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleValueProvider.swift; sourceTree = "<group>"; };
+		8B9169A82D4A615500A31AB6 /* SingleValueProvider+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SingleValueProvider+Protocol.swift"; sourceTree = "<group>"; };
+		8B9169A92D4A615500A31AB6 /* SingleValueProvider+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SingleValueProvider+Trigger.swift"; sourceTree = "<group>"; };
+		8B9169AA2D4A615500A31AB6 /* SingleValueProviderProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleValueProviderProtocols.swift; sourceTree = "<group>"; };
+		8B9169AC2D4A615500A31AB6 /* AnyStreamableProviderSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyStreamableProviderSource.swift; sourceTree = "<group>"; };
+		8B9169AD2D4A615500A31AB6 /* StreamableProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamableProvider.swift; sourceTree = "<group>"; };
+		8B9169AE2D4A615500A31AB6 /* StreamableProviderProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamableProviderProtocols.swift; sourceTree = "<group>"; };
+		8B9169B02D4A615500A31AB6 /* DataProviderTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTrigger.swift; sourceTree = "<group>"; };
+		8B9169B32D4A615500A31AB6 /* BaseOperationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperationExtensions.swift; sourceTree = "<group>"; };
+		8B9169B42D4A615500A31AB6 /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
+		8B9169B52D4A615500A31AB6 /* EndpointBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
+		8B9169B72D4A615500A31AB6 /* AsyncClosureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncClosureOperation.swift; sourceTree = "<group>"; };
+		8B9169B82D4A615500A31AB6 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		8B9169B92D4A615500A31AB6 /* ClosureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureOperation.swift; sourceTree = "<group>"; };
+		8B9169BB2D4A615500A31AB6 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		8B9169BC2D4A615500A31AB6 /* NetworkDataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataError.swift; sourceTree = "<group>"; };
+		8B9169BD2D4A615500A31AB6 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		8B9169BE2D4A615500A31AB6 /* NetworkOperationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperationHelper.swift; sourceTree = "<group>"; };
+		8B9169BF2D4A615500A31AB6 /* NetworkRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestFactory.swift; sourceTree = "<group>"; };
+		8B9169C02D4A615500A31AB6 /* NetworkRequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestModifier.swift; sourceTree = "<group>"; };
+		8B9169C12D4A615500A31AB6 /* NetworkResultFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResultFactory.swift; sourceTree = "<group>"; };
+		8B9169C32D4A615500A31AB6 /* CancellableCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancellableCall.swift; sourceTree = "<group>"; };
+		8B9169C42D4A615500A31AB6 /* CompoundOperationWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundOperationWrapper.swift; sourceTree = "<group>"; };
+		8B9169C52D4A615500A31AB6 /* OperationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1687,6 +1851,40 @@
 		8B9167672D4A233700A31AB6 /* SubstrateSdk */ = {
 			isa = PBXGroup;
 			children = (
+				8B9169862D4A5C7100A31AB6 /* ExtrinsicBatch.swift */,
+				8B9169852D4A5C7100A31AB6 /* ExtrinsicBuilderSnapshot.swift */,
+				8B9169622D4A5C3200A31AB6 /* ExtrinsicMetadataV15.swift */,
+				8B9169682D4A5C3200A31AB6 /* ExtrinsicSignature.swift */,
+				8B9169702D4A5C3300A31AB6 /* ExtrinsicSignatureFactory.swift */,
+				8B91696A2D4A5C3200A31AB6 /* ExtrinsicSignatureParams.swift */,
+				8B91696C2D4A5C3300A31AB6 /* ExtrinsicSignaturePayloadFactory.swift */,
+				8B9169642D4A5C3200A31AB6 /* MultiSignature.swift */,
+				8B91696D2D4A5C3300A31AB6 /* PalletMetadataV15.swift */,
+				8B9169632D4A5C3200A31AB6 /* ParitySignerSignaturePayloadFactory.swift */,
+				8B9169672D4A5C3200A31AB6 /* PostV14ExtrinsicMetadataProtocol.swift */,
+				8B9169612D4A5C3200A31AB6 /* PostV14PalletMetadataProtocol.swift */,
+				8B9169662D4A5C3200A31AB6 /* PostV14RuntimeMetadataProtocol.swift */,
+				8B9169652D4A5C3200A31AB6 /* RuntimeMetadataSearchEngine.swift */,
+				8B91696F2D4A5C3300A31AB6 /* RuntimeMetadataV15.swift */,
+				8B9169692D4A5C3200A31AB6 /* RuntimeTypeSearchMode.swift */,
+				8B9169712D4A5C3300A31AB6 /* TransactionExtending.swift */,
+				8B9169722D4A5C3300A31AB6 /* TransactionExtension.swift */,
+				8B91696E2D4A5C3300A31AB6 /* TransactionExtensionId.swift */,
+				8B91696B2D4A5C3200A31AB6 /* VerifySignature.swift */,
+				8B91695D2D4A5BF000A31AB6 /* DefaultTransactionExtensionCoder.swift */,
+				8B91695E2D4A5BF000A31AB6 /* DynamicScaleEncodingFactoryProtocol.swift */,
+				8B9169552D4A5BD600A31AB6 /* RuntimeApiMetadata.swift */,
+				8B9169562D4A5BD700A31AB6 /* RuntimeApiMetadataMethod.swift */,
+				8B9169572D4A5BD700A31AB6 /* RuntimeApiQueryResult.swift */,
+				8B9169532D4A5BD600A31AB6 /* RuntimeAugmentationFactory.swift */,
+				8B9169542D4A5BD600A31AB6 /* RuntimeAugmentationResult.swift */,
+				8B9169472D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift */,
+				8B9169492D4A5BBF00A31AB6 /* CheckGenesis.swift */,
+				8B91694A2D4A5BBF00A31AB6 /* CheckMetadataHash.swift */,
+				8B9169482D4A5BBF00A31AB6 /* CheckMortality.swift */,
+				8B91694B2D4A5BBF00A31AB6 /* CheckNonce.swift */,
+				8B9169462D4A5BBF00A31AB6 /* CheckSpecVersion.swift */,
+				8B9169452D4A5BBF00A31AB6 /* CheckTxVersion.swift */,
 				8B9166802D4A233700A31AB6 /* AccountIdAddressNode.swift */,
 				8B9166812D4A233700A31AB6 /* AddressQRCommon.swift */,
 				8B9166822D4A233700A31AB6 /* AddressQRDecoder.swift */,
@@ -1984,6 +2182,7 @@
 		8B91677C2D4A233700A31AB6 /* peaq-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8B9169C82D4A615500A31AB6 /* Operation-iOS */,
 				8B9165482D4A233700A31AB6 /* Alamofire */,
 				8B91655F2D4A233700A31AB6 /* BigInt */,
 				8B9165BC2D4A233700A31AB6 /* IrohaCrypto */,
@@ -2000,6 +2199,181 @@
 				8B91677B2D4A233700A31AB6 /* peaq_iOS.h */,
 			);
 			path = "peaq-iOS";
+			sourceTree = "<group>";
+		};
+		8B91698C2D4A615500A31AB6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169892D4A615500A31AB6 /* CoreDataCommon.swift */,
+				8B91698A2D4A615500A31AB6 /* CoreDataService.swift */,
+				8B91698B2D4A615500A31AB6 /* CoreDataServiceConfiguration.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8B91698E2D4A615500A31AB6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B91698D2D4A615500A31AB6 /* DataProviderPrimitives.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8B9169972D4A615500A31AB6 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8B91698F2D4A615500A31AB6 /* AnyDataProvider.swift */,
+				8B9169902D4A615500A31AB6 /* AnyDataProviderSource.swift */,
+				8B9169912D4A615500A31AB6 /* DataProvider.swift */,
+				8B9169922D4A615500A31AB6 /* DataProvider+Protocol.swift */,
+				8B9169932D4A615500A31AB6 /* DataProvider+Trigger.swift */,
+				8B9169942D4A615500A31AB6 /* DataProviderError.swift */,
+				8B9169952D4A615500A31AB6 /* DataProviderObserver.swift */,
+				8B9169962D4A615500A31AB6 /* DataProviderProtocols.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8B91699A2D4A615500A31AB6 /* Difference */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169982D4A615500A31AB6 /* ListDifferenceCalculator.swift */,
+				8B9169992D4A615500A31AB6 /* SectionedListDifference.swift */,
+			);
+			path = Difference;
+			sourceTree = "<group>";
+		};
+		8B9169A02D4A615500A31AB6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B91699B2D4A615500A31AB6 /* CoreDataContextObservable.swift */,
+				8B91699C2D4A615500A31AB6 /* CoreDataMapper.swift */,
+				8B91699D2D4A615500A31AB6 /* CoreDataRepository.swift */,
+				8B91699E2D4A615500A31AB6 /* CoreDataRepository+Async.swift */,
+				8B91699F2D4A615500A31AB6 /* CoreDataRepository+Protocol.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8B9169A52D4A615500A31AB6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169A02D4A615500A31AB6 /* CoreData */,
+				8B9169A12D4A615500A31AB6 /* AnyDataProviderRepository.swift */,
+				8B9169A22D4A615500A31AB6 /* AnyDataProviderRepositoryObservable.swift */,
+				8B9169A32D4A615500A31AB6 /* RepositoryObserver.swift */,
+				8B9169A42D4A615500A31AB6 /* RepositoryProtocols.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8B9169AB2D4A615500A31AB6 /* SingleValueProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169A62D4A615500A31AB6 /* AnySingleValueProviderSource.swift */,
+				8B9169A72D4A615500A31AB6 /* SingleValueProvider.swift */,
+				8B9169A82D4A615500A31AB6 /* SingleValueProvider+Protocol.swift */,
+				8B9169A92D4A615500A31AB6 /* SingleValueProvider+Trigger.swift */,
+				8B9169AA2D4A615500A31AB6 /* SingleValueProviderProtocols.swift */,
+			);
+			path = SingleValueProvider;
+			sourceTree = "<group>";
+		};
+		8B9169AF2D4A615500A31AB6 /* StreamableProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169AC2D4A615500A31AB6 /* AnyStreamableProviderSource.swift */,
+				8B9169AD2D4A615500A31AB6 /* StreamableProvider.swift */,
+				8B9169AE2D4A615500A31AB6 /* StreamableProviderProtocols.swift */,
+			);
+			path = StreamableProvider;
+			sourceTree = "<group>";
+		};
+		8B9169B12D4A615500A31AB6 /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169B02D4A615500A31AB6 /* DataProviderTrigger.swift */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
+		8B9169B22D4A615500A31AB6 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8B91698E2D4A615500A31AB6 /* Common */,
+				8B9169972D4A615500A31AB6 /* DataProvider */,
+				8B91699A2D4A615500A31AB6 /* Difference */,
+				8B9169A52D4A615500A31AB6 /* Repository */,
+				8B9169AB2D4A615500A31AB6 /* SingleValueProvider */,
+				8B9169AF2D4A615500A31AB6 /* StreamableProvider */,
+				8B9169B12D4A615500A31AB6 /* Triggers */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8B9169B62D4A615500A31AB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169B32D4A615500A31AB6 /* BaseOperationExtensions.swift */,
+				8B9169B42D4A615500A31AB6 /* DispatchQueueHelper.swift */,
+				8B9169B52D4A615500A31AB6 /* EndpointBuilder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8B9169BA2D4A615500A31AB6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169B72D4A615500A31AB6 /* AsyncClosureOperation.swift */,
+				8B9169B82D4A615500A31AB6 /* BaseOperation.swift */,
+				8B9169B92D4A615500A31AB6 /* ClosureOperation.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B9169C22D4A615500A31AB6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169BB2D4A615500A31AB6 /* NetworkConstants.swift */,
+				8B9169BC2D4A615500A31AB6 /* NetworkDataError.swift */,
+				8B9169BD2D4A615500A31AB6 /* NetworkOperation.swift */,
+				8B9169BE2D4A615500A31AB6 /* NetworkOperationHelper.swift */,
+				8B9169BF2D4A615500A31AB6 /* NetworkRequestFactory.swift */,
+				8B9169C02D4A615500A31AB6 /* NetworkRequestModifier.swift */,
+				8B9169C12D4A615500A31AB6 /* NetworkResultFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8B9169C62D4A615500A31AB6 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169BA2D4A615500A31AB6 /* Base */,
+				8B9169C22D4A615500A31AB6 /* Network */,
+				8B9169C32D4A615500A31AB6 /* CancellableCall.swift */,
+				8B9169C42D4A615500A31AB6 /* CompoundOperationWrapper.swift */,
+				8B9169C52D4A615500A31AB6 /* OperationManager.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8B9169C72D4A615500A31AB6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B91698C2D4A615500A31AB6 /* CoreData */,
+				8B9169B22D4A615500A31AB6 /* DataProvider */,
+				8B9169B62D4A615500A31AB6 /* Helpers */,
+				8B9169C62D4A615500A31AB6 /* Operations */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8B9169C82D4A615500A31AB6 /* Operation-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B9169C72D4A615500A31AB6 /* Classes */,
+			);
+			path = "Operation-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2088,7 +2462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9169CC2D4A615500A31AB6 /* DataProviderPrimitives.swift in Sources */,
 				8B91678F2D4A233800A31AB6 /* DispatchQueue+Alamofire.swift in Sources */,
+				8B9169EC2D4A615600A31AB6 /* AsyncClosureOperation.swift in Sources */,
 				8B9168CC2D4A233800A31AB6 /* KeystoreDefinition.swift in Sources */,
 				8B9169282D4A233900A31AB6 /* TypeSetParser.swift in Sources */,
 				8B9168F62D4A233900A31AB6 /* RuntimeTypes.swift in Sources */,
@@ -2102,16 +2478,24 @@
 				8B9167AF2D4A233800A31AB6 /* Division.swift in Sources */,
 				8B9168822D4A233800A31AB6 /* DynamicScaleCoding+Codable.swift in Sources */,
 				8B9167EE2D4A233800A31AB6 /* JSONRPCAliases.swift in Sources */,
+				8B9169CD2D4A615500A31AB6 /* AnyDataProvider.swift in Sources */,
+				8B91697D2D4A5C3300A31AB6 /* VerifySignature.swift in Sources */,
+				8B9169602D4A5BF000A31AB6 /* DynamicScaleEncodingFactoryProtocol.swift in Sources */,
 				8B9167922D4A233800A31AB6 /* StringEncoding+Alamofire.swift in Sources */,
 				8B9167A22D4A233800A31AB6 /* RetryPolicy.swift in Sources */,
 				8B9168982D4A233800A31AB6 /* ExtrinsicExtra.swift in Sources */,
 				8B9167992D4A233800A31AB6 /* Concurrency.swift in Sources */,
 				8B9167E12D4A233800A31AB6 /* keccak.c in Sources */,
 				8B9168CB2D4A233800A31AB6 /* KeystoreData.swift in Sources */,
+				8B9169CA2D4A615500A31AB6 /* CoreDataService.swift in Sources */,
+				8B9169842D4A5C3300A31AB6 /* TransactionExtension.swift in Sources */,
 				8B91683D2D4A233800A31AB6 /* FoundationHTTPHandler.swift in Sources */,
 				8B9167DF2D4A233800A31AB6 /* SS58AddressFactory.m in Sources */,
 				8B9167F62D4A233800A31AB6 /* AnySingleValueProviderSource.swift in Sources */,
+				8B9169E82D4A615600A31AB6 /* DataProviderTrigger.swift in Sources */,
+				8B9169E52D4A615500A31AB6 /* AnyStreamableProviderSource.swift in Sources */,
 				8B9167862D4A233800A31AB6 /* Protected.swift in Sources */,
+				8B9169D32D4A615500A31AB6 /* DataProviderObserver.swift in Sources */,
 				8B91692E2D4A233900A31AB6 /* UInt64+Scale.swift in Sources */,
 				8B9167872D4A233800A31AB6 /* Request.swift in Sources */,
 				8B9168E42D4A233800A31AB6 /* PalletMetadataV14.swift in Sources */,
@@ -2127,6 +2511,7 @@
 				8B91689E2D4A233800A31AB6 /* ExtrinsicSignatureConverter.swift in Sources */,
 				8B91683B2D4A233800A31AB6 /* Data+Extensions.swift in Sources */,
 				8B9167CB2D4A233800A31AB6 /* EDPrivateKey.m in Sources */,
+				8B91695B2D4A5BD700A31AB6 /* RuntimeApiMetadataMethod.swift in Sources */,
 				8B91680E2D4A233800A31AB6 /* DispatchQueueHelper.swift in Sources */,
 				8B91679E2D4A233800A31AB6 /* RedirectHandler.swift in Sources */,
 				8B9168AB2D4A233800A31AB6 /* GenericMultiAddressNode.swift in Sources */,
@@ -2136,11 +2521,13 @@
 				8B91681E2D4A233800A31AB6 /* SingleValueProvider+Protocol.swift in Sources */,
 				8B9167FE2D4A233800A31AB6 /* CoreDataCommon.swift in Sources */,
 				8B9168FE2D4A233900A31AB6 /* ScaleTuple.swift in Sources */,
+				8B91697C2D4A5C3300A31AB6 /* ExtrinsicSignatureParams.swift in Sources */,
 				8B91688B2D4A233800A31AB6 /* EnumValuesNodeFactory.swift in Sources */,
 				8B9167C12D4A233800A31AB6 /* IRBIP39SeedCreator.m in Sources */,
 				8B9168292D4A233800A31AB6 /* humansize.c in Sources */,
 				8B9167DA2D4A233800A31AB6 /* SNPrivateKey.m in Sources */,
 				8B9167B52D4A233800A31AB6 /* Multiplication.swift in Sources */,
+				8B9169ED2D4A615600A31AB6 /* BaseOperation.swift in Sources */,
 				8B9168E92D4A233800A31AB6 /* ProxyNode.swift in Sources */,
 				8B91679B2D4A233800A31AB6 /* MultipartFormData.swift in Sources */,
 				8B9168262D4A233800A31AB6 /* crypto_scrypt.c in Sources */,
@@ -2148,9 +2535,11 @@
 				8B91690F2D4A233900A31AB6 /* StorageMetadata.swift in Sources */,
 				8B9168942D4A233800A31AB6 /* Extrinsic.swift in Sources */,
 				8B9167962D4A233800A31AB6 /* AuthenticationInterceptor.swift in Sources */,
+				8B9169522D4A5BBF00A31AB6 /* CheckNonce.swift in Sources */,
 				8B9168102D4A233800A31AB6 /* ListDifferenceCalculator.swift in Sources */,
 				8B9169082D4A233900A31AB6 /* StorageEntryMetadata.swift in Sources */,
 				8B9168DC2D4A233800A31AB6 /* NullNode.swift in Sources */,
+				8B9169EF2D4A615600A31AB6 /* NetworkConstants.swift in Sources */,
 				8B9168AD2D4A233800A31AB6 /* GenericType.swift in Sources */,
 				8B9167E82D4A233800A31AB6 /* ExtrinsicStatus.swift in Sources */,
 				8B9169392D4A233900A31AB6 /* XXH3-Bit128.swift in Sources */,
@@ -2161,6 +2550,7 @@
 				8B9168CD2D4A233800A31AB6 /* KeystoreExtractor.swift in Sources */,
 				8B91693D2D4A233900A31AB6 /* XXH64.swift in Sources */,
 				8B91687F2D4A233800A31AB6 /* Decimal+Substrate.swift in Sources */,
+				8B9169D62D4A615500A31AB6 /* SectionedListDifference.swift in Sources */,
 				8B9167F22D4A233800A31AB6 /* AnyDataProvider.swift in Sources */,
 				8B91683F2D4A233800A31AB6 /* FoundationSecurity.swift in Sources */,
 				8B9168392D4A233800A31AB6 /* secp256k1.c in Sources */,
@@ -2169,12 +2559,18 @@
 				8B9167F72D4A233800A31AB6 /* AnyStreamableProviderSource.swift in Sources */,
 				8B9168932D4A233800A31AB6 /* EventRecordNode.swift in Sources */,
 				8B9167BA2D4A233800A31AB6 /* Strideable.swift in Sources */,
+				8B91694C2D4A5BBF00A31AB6 /* CheckTxVersion.swift in Sources */,
+				8B9169DE2D4A615500A31AB6 /* RepositoryObserver.swift in Sources */,
 				8B9168892D4A233800A31AB6 /* EnumNodeFactory.swift in Sources */,
 				8B9168C52D4A233800A31AB6 /* JSONRPCSubscriptionIdWrapper.swift in Sources */,
 				8B9168AF2D4A233800A31AB6 /* H160.swift in Sources */,
+				8B9169F32D4A615600A31AB6 /* NetworkRequestFactory.swift in Sources */,
 				8B91680D2D4A233800A31AB6 /* DataProviderTrigger.swift in Sources */,
+				8B9169DF2D4A615500A31AB6 /* RepositoryProtocols.swift in Sources */,
 				8B9168CF2D4A233800A31AB6 /* KeystoreInfoFactory.swift in Sources */,
 				8B9168FD2D4A233900A31AB6 /* ScaleOption.swift in Sources */,
+				8B9169802D4A5C3300A31AB6 /* TransactionExtensionId.swift in Sources */,
+				8B9169742D4A5C3300A31AB6 /* ExtrinsicMetadataV15.swift in Sources */,
 				8B9167EB2D4A233800A31AB6 /* StorageQuery.swift in Sources */,
 				8B91693C2D4A233900A31AB6 /* XXH32.swift in Sources */,
 				8B91684E2D4A233800A31AB6 /* AccountIdAddressNode.swift in Sources */,
@@ -2195,6 +2591,7 @@
 				8B91678E2D4A233800A31AB6 /* WebSocketRequest.swift in Sources */,
 				8B9167902D4A233800A31AB6 /* OperationQueue+Alamofire.swift in Sources */,
 				8B91684D2D4A233800A31AB6 /* WSEngine.swift in Sources */,
+				8B9169DA2D4A615500A31AB6 /* CoreDataRepository+Async.swift in Sources */,
 				8B91690C2D4A233900A31AB6 /* StorageEntryTypeV14.swift in Sources */,
 				8B9168782D4A233800A31AB6 /* Data+Hash.swift in Sources */,
 				8B9168DB2D4A233800A31AB6 /* NovaPathGenerator.swift in Sources */,
@@ -2203,24 +2600,34 @@
 				8B9168D52D4A233800A31AB6 /* MappingNode+Generic.swift in Sources */,
 				8B9167932D4A233800A31AB6 /* URLRequest+Alamofire.swift in Sources */,
 				8B91690B2D4A233900A31AB6 /* StorageEntryType.swift in Sources */,
+				8B9169772D4A5C3300A31AB6 /* RuntimeMetadataSearchEngine.swift in Sources */,
+				8B9169E12D4A615500A31AB6 /* SingleValueProvider.swift in Sources */,
 				8B9168112D4A233800A31AB6 /* NetworkConstants.swift in Sources */,
 				8B9168C42D4A233800A31AB6 /* JSONRPCRequestFactory.swift in Sources */,
 				8B9168052D4A233800A31AB6 /* CoreDataServiceConfiguration.swift in Sources */,
+				8B9169F52D4A615600A31AB6 /* NetworkResultFactory.swift in Sources */,
 				8B9168552D4A233800A31AB6 /* BaseExtrinsicExtension.swift in Sources */,
 				8B91691E2D4A233900A31AB6 /* TypeMappingParser.swift in Sources */,
+				8B9169592D4A5BD700A31AB6 /* RuntimeAugmentationResult.swift in Sources */,
 				8B9167F02D4A233800A31AB6 /* SubstrateAlias.swift in Sources */,
+				8B9169D72D4A615500A31AB6 /* CoreDataContextObservable.swift in Sources */,
 				8B91679A2D4A233800A31AB6 /* EventMonitor.swift in Sources */,
 				8B9168FC2D4A233900A31AB6 /* ScaleInfoTypeMapping.swift in Sources */,
 				8B9167882D4A233800A31AB6 /* RequestTaskMap.swift in Sources */,
 				8B9167892D4A233800A31AB6 /* Response.swift in Sources */,
 				8B9167982D4A233800A31AB6 /* Combine.swift in Sources */,
 				8B9168B52D4A233800A31AB6 /* Health.swift in Sources */,
+				8B9169E22D4A615500A31AB6 /* SingleValueProvider+Protocol.swift in Sources */,
+				8B9169822D4A5C3300A31AB6 /* ExtrinsicSignatureFactory.swift in Sources */,
 				8B9168612D4A233800A31AB6 /* Bool+Scale.swift in Sources */,
+				8B9169F72D4A615600A31AB6 /* CompoundOperationWrapper.swift in Sources */,
 				8B9168482D4A233800A31AB6 /* TCPTransport.swift in Sources */,
+				8B9169792D4A5C3300A31AB6 /* PostV14ExtrinsicMetadataProtocol.swift in Sources */,
 				8B9168B42D4A233800A31AB6 /* H512Node.swift in Sources */,
 				8B9168D42D4A233800A31AB6 /* MappingNode.swift in Sources */,
 				8B91682A2D4A233800A31AB6 /* insecure_memzero.c in Sources */,
 				8B9167B82D4A233800A31AB6 /* Shifts.swift in Sources */,
+				8B9169E32D4A615500A31AB6 /* SingleValueProvider+Trigger.swift in Sources */,
 				8B9168792D4A233800A31AB6 /* Data+Hex.swift in Sources */,
 				8B9168272D4A233800A31AB6 /* entropy.c in Sources */,
 				8B9168632D4A233800A31AB6 /* BytesNode.swift in Sources */,
@@ -2234,11 +2641,14 @@
 				8B9169262D4A233900A31AB6 /* TypeRegistryCatalog+Init.swift in Sources */,
 				8B9168FF2D4A233900A31AB6 /* Scheduler.swift in Sources */,
 				8B9167A12D4A233800A31AB6 /* ResponseSerialization.swift in Sources */,
+				8B91697A2D4A5C3300A31AB6 /* ExtrinsicSignature.swift in Sources */,
 				8B91689D2D4A233800A31AB6 /* ExtrinsicsDecoderNode.swift in Sources */,
+				8B9169F12D4A615600A31AB6 /* NetworkOperation.swift in Sources */,
 				8B91677E2D4A233800A31AB6 /* DataRequest.swift in Sources */,
 				8B9167D82D4A233800A31AB6 /* SNKeyFactory.m in Sources */,
 				8B9167E52D4A233800A31AB6 /* Block.swift in Sources */,
 				8B9167C82D4A233800A31AB6 /* NSData+Base58.m in Sources */,
+				8B9169732D4A5C3300A31AB6 /* PostV14PalletMetadataProtocol.swift in Sources */,
 				8B91677F2D4A233800A31AB6 /* DataStreamRequest.swift in Sources */,
 				8B91686F2D4A233800A31AB6 /* CompactNode.swift in Sources */,
 				8B91683E2D4A233800A31AB6 /* FoundationHTTPServerHandler.swift in Sources */,
@@ -2247,6 +2657,7 @@
 				8B9168C22D4A233800A31AB6 /* JSONRPCNodeSwitching.swift in Sources */,
 				8B91687E2D4A233800A31AB6 /* DataNode.swift in Sources */,
 				8B9168F42D4A233900A31AB6 /* RuntimeMetadataV14.swift in Sources */,
+				8B91694D2D4A5BBF00A31AB6 /* CheckSpecVersion.swift in Sources */,
 				8B91678D2D4A233800A31AB6 /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				8B91688D2D4A233800A31AB6 /* EraNode.swift in Sources */,
 				8B9168B82D4A233800A31AB6 /* IconGenerating.swift in Sources */,
@@ -2258,31 +2669,41 @@
 				8B9168622D4A233800A31AB6 /* BoxProposalNode.swift in Sources */,
 				8B9168AC2D4A233800A31AB6 /* GenericNode.swift in Sources */,
 				8B9167EF2D4A233800A31AB6 /* peaq.swift in Sources */,
+				8B9169782D4A5C3300A31AB6 /* PostV14RuntimeMetadataProtocol.swift in Sources */,
 				8B9167CF2D4A233800A31AB6 /* EDSigner.m in Sources */,
 				8B91681F2D4A233800A31AB6 /* SingleValueProvider+Trigger.swift in Sources */,
 				8B9167822D4A233800A31AB6 /* HTTPMethod.swift in Sources */,
 				8B9167952D4A233800A31AB6 /* AlamofireExtended.swift in Sources */,
 				8B9168532D4A233800A31AB6 /* AliasNodeFactory.swift in Sources */,
 				0487F7C92B5141C4001956FC /* ViewController.swift in Sources */,
+				8B9169D82D4A615500A31AB6 /* CoreDataMapper.swift in Sources */,
 				8B9169102D4A233900A31AB6 /* StorageMetadataV14.swift in Sources */,
 				8B9167C22D4A233800A31AB6 /* IRSeedCreator+BIP39.m in Sources */,
 				8B9168A02D4A233800A31AB6 /* ExtrinsicSignaturePayloadFormat.swift in Sources */,
 				8B9167A92D4A233800A31AB6 /* BigInt.swift in Sources */,
 				8B9169202D4A233900A31AB6 /* TypeNodeFactory.swift in Sources */,
+				8B9169EE2D4A615600A31AB6 /* ClosureOperation.swift in Sources */,
+				8B9169EB2D4A615600A31AB6 /* EndpointBuilder.swift in Sources */,
+				8B9169EA2D4A615600A31AB6 /* DispatchQueueHelper.swift in Sources */,
 				8B9167DE2D4A233800A31AB6 /* SNSigner.m in Sources */,
 				8B9169152D4A233900A31AB6 /* SubstrateJunctionFactory.swift in Sources */,
 				8B91689C2D4A233800A31AB6 /* ExtrinsicNode.swift in Sources */,
 				8B9167BC2D4A233800A31AB6 /* Subtraction.swift in Sources */,
+				8B9169F02D4A615600A31AB6 /* NetworkDataError.swift in Sources */,
 				8B9168062D4A233800A31AB6 /* DataProvider.swift in Sources */,
+				8B9169CE2D4A615500A31AB6 /* AnyDataProviderSource.swift in Sources */,
 				8B9167F82D4A233800A31AB6 /* BaseOperation.swift in Sources */,
 				8B9168202D4A233800A31AB6 /* SingleValueProviderProtocols.swift in Sources */,
 				8B9167D22D4A233800A31AB6 /* SECKeyFactory.m in Sources */,
 				8B91678B2D4A233800A31AB6 /* SessionDelegate.swift in Sources */,
 				8B9168492D4A233800A31AB6 /* Transport.swift in Sources */,
 				8B9168912D4A233800A31AB6 /* EventMetadata.swift in Sources */,
+				8B91697F2D4A5C3300A31AB6 /* PalletMetadataV15.swift in Sources */,
+				8B9169D12D4A615500A31AB6 /* DataProvider+Trigger.swift in Sources */,
 				8B91684A2D4A233800A31AB6 /* WebSocket.swift in Sources */,
 				8B9168432D4A233800A31AB6 /* HTTPHandler.swift in Sources */,
 				8B9167912D4A233800A31AB6 /* Result+Alamofire.swift in Sources */,
+				8B9169752D4A5C3300A31AB6 /* ParitySignerSignaturePayloadFactory.swift in Sources */,
 				8B91678A2D4A233800A31AB6 /* Session.swift in Sources */,
 				8B9168A52D4A233800A31AB6 /* GenericAccountIdNode.swift in Sources */,
 				8B9167E42D4A233800A31AB6 /* BigUInt+Hex.swift in Sources */,
@@ -2294,6 +2715,7 @@
 				8B9168772D4A233800A31AB6 /* Data+FixedWidthInteger.swift in Sources */,
 				8B91686D2D4A233800A31AB6 /* ChargeAssetTxPayment.swift in Sources */,
 				8B9168072D4A233800A31AB6 /* DataProvider+Protocol.swift in Sources */,
+				8B91695A2D4A5BD700A31AB6 /* RuntimeApiMetadata.swift in Sources */,
 				8B91685B2D4A233800A31AB6 /* BIP32ExtendedKeypair.swift in Sources */,
 				8B9168752D4A233800A31AB6 /* Data+AccountId.swift in Sources */,
 				8B9169212D4A233900A31AB6 /* TypeParser.swift in Sources */,
@@ -2305,6 +2727,7 @@
 				8B9169012D4A233900A31AB6 /* SeedFactory.swift in Sources */,
 				8B9167D02D4A233800A31AB6 /* IRScryptKeyDeriviation.m in Sources */,
 				8B9168212D4A233800A31AB6 /* StreamableProvider.swift in Sources */,
+				8B9169832D4A5C3300A31AB6 /* TransactionExtending.swift in Sources */,
 				8B9168452D4A233800A31AB6 /* Security.swift in Sources */,
 				8B9168522D4A233800A31AB6 /* AliasNode.swift in Sources */,
 				8B9168D62D4A233800A31AB6 /* ModuleConstantMetadata.swift in Sources */,
@@ -2321,12 +2744,16 @@
 				8B9167C32D4A233800A31AB6 /* SNBIP39SeedCreator.m in Sources */,
 				8B9168642D4A233800A31AB6 /* CallArgumentMetadata.swift in Sources */,
 				8B9167BD2D4A233800A31AB6 /* Words and Bits.swift in Sources */,
+				8B9169D52D4A615500A31AB6 /* ListDifferenceCalculator.swift in Sources */,
 				8B91693E2D4A233900A31AB6 /* xxHash-Common.swift in Sources */,
 				8B9167AB2D4A233800A31AB6 /* Bitwise Ops.swift in Sources */,
 				8B9168902D4A233800A31AB6 /* EthereumSignature.swift in Sources */,
 				8B9168A42D4A233800A31AB6 /* FixedLengthDataStoring.swift in Sources */,
 				8B91685F2D4A233800A31AB6 /* BIP32SeedFactory.swift in Sources */,
 				8B9168BF2D4A233800A31AB6 /* JSONRPCEngine.swift in Sources */,
+				8B9169E42D4A615500A31AB6 /* SingleValueProviderProtocols.swift in Sources */,
+				8B9169DD2D4A615500A31AB6 /* AnyDataProviderRepositoryObservable.swift in Sources */,
+				8B9169512D4A5BBF00A31AB6 /* CheckMetadataHash.swift in Sources */,
 				8B9167CA2D4A233800A31AB6 /* EDKeyFactory.m in Sources */,
 				8B91693A2D4A233900A31AB6 /* XXH3-Common.swift in Sources */,
 				8B91685A2D4A233800A31AB6 /* BigInt+Scale.swift in Sources */,
@@ -2341,6 +2768,8 @@
 				8B9168F92D4A233900A31AB6 /* ScaleCoding.swift in Sources */,
 				8B9167FD2D4A233800A31AB6 /* CompoundOperationWrapper.swift in Sources */,
 				8B9168C02D4A233800A31AB6 /* JSONRPCEngineShared.swift in Sources */,
+				8B9169C92D4A615500A31AB6 /* CoreDataCommon.swift in Sources */,
+				8B9169D02D4A615500A31AB6 /* DataProvider+Protocol.swift in Sources */,
 				8B9167BB2D4A233800A31AB6 /* String Conversion.swift in Sources */,
 				8B9168F82D4A233900A31AB6 /* ScaleBoolOption.swift in Sources */,
 				8B9168A22D4A233800A31AB6 /* FixedArrayNodeFactory.swift in Sources */,
@@ -2352,6 +2781,7 @@
 				8B9169332D4A233900A31AB6 /* WebSocketEngine+Delegate.swift in Sources */,
 				8B9167DC2D4A233800A31AB6 /* SNSignature.m in Sources */,
 				8B9167AE2D4A233800A31AB6 /* Data Conversion.swift in Sources */,
+				8B9169DC2D4A615500A31AB6 /* AnyDataProviderRepository.swift in Sources */,
 				8B91683A2D4A233800A31AB6 /* Compression.swift in Sources */,
 				8B9167E62D4A233800A31AB6 /* ConstantCodingPath.swift in Sources */,
 				8B9168422D4A233800A31AB6 /* Framer.swift in Sources */,
@@ -2364,13 +2794,18 @@
 				8B9167ED2D4A233800A31AB6 /* did_document_format.pb.swift in Sources */,
 				8B91682C2D4A233800A31AB6 /* sha256.c in Sources */,
 				8B91688F2D4A233800A31AB6 /* ErrorMetadataV14.swift in Sources */,
+				8B9169D22D4A615500A31AB6 /* DataProviderError.swift in Sources */,
+				8B9169882D4A5C7100A31AB6 /* ExtrinsicBatch.swift in Sources */,
 				8B9168412D4A233800A31AB6 /* FrameCollector.swift in Sources */,
+				8B9169D92D4A615500A31AB6 /* CoreDataRepository.swift in Sources */,
 				8B9167E92D4A233800A31AB6 /* SS58FactoryExtensions.swift in Sources */,
 				8B91691C2D4A233900A31AB6 /* TupleNode.swift in Sources */,
 				8B9168162D4A233800A31AB6 /* NetworkRequestFactory.swift in Sources */,
 				8B9168B22D4A233800A31AB6 /* H256Node.swift in Sources */,
 				8B9169322D4A233900A31AB6 /* WebSocketEngine.swift in Sources */,
+				8B91694E2D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift in Sources */,
 				8B9168D22D4A233800A31AB6 /* KnownType.swift in Sources */,
+				8B9169812D4A5C3300A31AB6 /* RuntimeMetadataV15.swift in Sources */,
 				8B9168B92D4A233800A31AB6 /* Int8+Scale.swift in Sources */,
 				8B9168E02D4A233800A31AB6 /* OneOfTypeResolver.swift in Sources */,
 				8B9167F42D4A233800A31AB6 /* AnyDataProviderRepositoryObservable.swift in Sources */,
@@ -2389,6 +2824,7 @@
 				8B9169132D4A233900A31AB6 /* StructNode.swift in Sources */,
 				8B91691B2D4A233900A31AB6 /* TrimProcessor.swift in Sources */,
 				8B9169062D4A233900A31AB6 /* SiVariantNode.swift in Sources */,
+				8B91695F2D4A5BF000A31AB6 /* DefaultTransactionExtensionCoder.swift in Sources */,
 				8B9168862D4A233800A31AB6 /* EcdsaKeypairFactory.swift in Sources */,
 				8B9167C62D4A233800A31AB6 /* IRMnemonicCreator.m in Sources */,
 				8B9168562D4A233800A31AB6 /* BasicNode.swift in Sources */,
@@ -2396,17 +2832,21 @@
 				8B9168252D4A233800A31AB6 /* crypto_scrypt_smix.c in Sources */,
 				8B91682B2D4A233800A31AB6 /* readpass.c in Sources */,
 				8B9168B32D4A233800A31AB6 /* H512.swift in Sources */,
+				8B9169872D4A5C7100A31AB6 /* ExtrinsicBuilderSnapshot.swift in Sources */,
 				8B9168D32D4A233800A31AB6 /* Logger.swift in Sources */,
 				8B9168D12D4A233800A31AB6 /* KnownRuntimeModule.swift in Sources */,
 				8B9168722D4A233800A31AB6 /* ConstantMetadataV14.swift in Sources */,
 				8B9168592D4A233800A31AB6 /* BigInt+CurveOrder.swift in Sources */,
 				8B9168042D4A233800A31AB6 /* CoreDataService.swift in Sources */,
 				8B9168A82D4A233800A31AB6 /* GenericCallNode.swift in Sources */,
+				8B9169E72D4A615600A31AB6 /* StreamableProviderProtocols.swift in Sources */,
 				8B91692B2D4A233900A31AB6 /* UInt8+Scale.swift in Sources */,
 				8B9167842D4A233800A31AB6 /* ParameterEncoder.swift in Sources */,
 				8B91686A2D4A233800A31AB6 /* ChainData.swift in Sources */,
+				8B9169E62D4A615500A31AB6 /* StreamableProvider.swift in Sources */,
 				8B9169342D4A233900A31AB6 /* WebSocketEngine+Protocol.swift in Sources */,
 				8B9167F32D4A233800A31AB6 /* AnyDataProviderRepository.swift in Sources */,
+				8B9169CB2D4A615500A31AB6 /* CoreDataServiceConfiguration.swift in Sources */,
 				8B9168852D4A233800A31AB6 /* DynamicScaleEncoder.swift in Sources */,
 				8B9168BC2D4A233800A31AB6 /* Int64+Scale.swift in Sources */,
 				8B91680C2D4A233800A31AB6 /* DataProviderProtocols.swift in Sources */,
@@ -2415,10 +2855,12 @@
 				8B9168EF2D4A233800A31AB6 /* RPCMethod.swift in Sources */,
 				8B91688C2D4A233800A31AB6 /* Era.swift in Sources */,
 				8B91692C2D4A233900A31AB6 /* UInt16+Scale.swift in Sources */,
+				8B9169762D4A5C3300A31AB6 /* MultiSignature.swift in Sources */,
 				8B9168BE2D4A233800A31AB6 /* JSONRPCData.swift in Sources */,
 				8B9167A82D4A233800A31AB6 /* Addition.swift in Sources */,
 				8B9168712D4A233800A31AB6 /* ComponentsParser.swift in Sources */,
 				8B9169122D4A233900A31AB6 /* StringScaleMapper.swift in Sources */,
+				8B91695C2D4A5BD700A31AB6 /* RuntimeApiQueryResult.swift in Sources */,
 				8B9167C42D4A233800A31AB6 /* NSData+Blake2.m in Sources */,
 				8B91685E2D4A233800A31AB6 /* BIP32KeypairFactory.swift in Sources */,
 				8B9167A62D4A233800A31AB6 /* Alamofire.swift in Sources */,
@@ -2427,17 +2869,21 @@
 				8B9167FC2D4A233800A31AB6 /* CompoundOperationExtensions.swift in Sources */,
 				8B91689F2D4A233800A31AB6 /* ExtrinsicSignatureNode.swift in Sources */,
 				8B9168922D4A233800A31AB6 /* EventMetadataV14.swift in Sources */,
+				8B9169F42D4A615600A31AB6 /* NetworkRequestModifier.swift in Sources */,
 				8B9169232D4A233900A31AB6 /* TypeRegistry+Metadata.swift in Sources */,
 				8B91689B2D4A233800A31AB6 /* ExtrinsicMetadataV14.swift in Sources */,
 				8B9168872D4A233800A31AB6 /* Ed25519KeypairFactory.swift in Sources */,
 				8B9167C72D4A233800A31AB6 /* IRSeedCreator.m in Sources */,
 				8B9168EA2D4A233800A31AB6 /* ReachabilityManager.swift in Sources */,
+				8B9169F82D4A615600A31AB6 /* OperationManager.swift in Sources */,
 				8B9169382D4A233900A31AB6 /* XXH3-Bit64.swift in Sources */,
+				8B91697E2D4A5C3300A31AB6 /* ExtrinsicSignaturePayloadFactory.swift in Sources */,
 				8B9168962D4A233800A31AB6 /* ExtrinsicCheck.swift in Sources */,
 				8B9168F32D4A233900A31AB6 /* RuntimeMetadataContainer.swift in Sources */,
 				8B91683C2D4A233800A31AB6 /* Engine.swift in Sources */,
 				8B9167AD2D4A233800A31AB6 /* Comparable.swift in Sources */,
 				8B9167EC2D4A233800A31AB6 /* StorageUpdate.swift in Sources */,
+				8B9169502D4A5BBF00A31AB6 /* CheckGenesis.swift in Sources */,
 				8B91681D2D4A233800A31AB6 /* SingleValueProvider.swift in Sources */,
 				8B9167F92D4A233800A31AB6 /* BaseOperationExtensions.swift in Sources */,
 				8B9169222D4A233900A31AB6 /* TypeRegistry.swift in Sources */,
@@ -2461,6 +2907,7 @@
 				8B9169192D4A233900A31AB6 /* TableResolver.swift in Sources */,
 				8B9167CD2D4A233800A31AB6 /* EDSignature.m in Sources */,
 				8B9168BB2D4A233800A31AB6 /* Int32+Scale.swift in Sources */,
+				8B91697B2D4A5C3300A31AB6 /* RuntimeTypeSearchMode.swift in Sources */,
 				8B9169022D4A233900A31AB6 /* SessionKeysSubstrateNode.swift in Sources */,
 				8B9169182D4A233900A31AB6 /* SubstrateQREncoder.swift in Sources */,
 				8B91687A2D4A233800A31AB6 /* Data+Keccak.swift in Sources */,
@@ -2476,14 +2923,17 @@
 				8B9168882D4A233800A31AB6 /* EnumNode.swift in Sources */,
 				8B9169172D4A233900A31AB6 /* SubstrateQRDecoder.swift in Sources */,
 				8B9168B02D4A233800A31AB6 /* H160Node.swift in Sources */,
+				8B9169E92D4A615600A31AB6 /* BaseOperationExtensions.swift in Sources */,
 				8B91684F2D4A233800A31AB6 /* AddressQRCommon.swift in Sources */,
 				8B9168A62D4A233800A31AB6 /* GenericAccountIndexNode.swift in Sources */,
 				8B9167D42D4A233800A31AB6 /* SECPublicKey.m in Sources */,
 				8B9168E52D4A233800A31AB6 /* PolkadotIcon.swift in Sources */,
 				8B9168E22D4A233800A31AB6 /* OptionNode.swift in Sources */,
 				8B91690E2D4A233900A31AB6 /* StorageKeyFactory.swift in Sources */,
+				8B9169D42D4A615500A31AB6 /* DataProviderProtocols.swift in Sources */,
 				8B9169292D4A233900A31AB6 /* TypeValuesParser.swift in Sources */,
 				8B9169302D4A233900A31AB6 /* VectorNodeFactory.swift in Sources */,
+				8B9169CF2D4A615500A31AB6 /* DataProvider.swift in Sources */,
 				8B9168E12D4A233800A31AB6 /* OpaqueCall.swift in Sources */,
 				8B9168F12D4A233900A31AB6 /* RuntimeJsonContext.swift in Sources */,
 				8B91692A2D4A233900A31AB6 /* UIColor+HSL.swift in Sources */,
@@ -2498,6 +2948,7 @@
 				8B9167B92D4A233800A31AB6 /* Square Root.swift in Sources */,
 				0487F7D92B5142AE001956FC /* IndicatorManager.swift in Sources */,
 				8B9169162D4A233900A31AB6 /* SubstrateQRCommon.swift in Sources */,
+				8B9169E02D4A615500A31AB6 /* AnySingleValueProviderSource.swift in Sources */,
 				0487F7C72B5141C4001956FC /* SceneDelegate.swift in Sources */,
 				8B9168132D4A233800A31AB6 /* NetworkIndicatorManager.swift in Sources */,
 				8B91677D2D4A233800A31AB6 /* AFError.swift in Sources */,
@@ -2508,7 +2959,9 @@
 				8B9169372D4A233900A31AB6 /* TweetNacl.swift in Sources */,
 				8B9167D72D4A233800A31AB6 /* SECSigner.m in Sources */,
 				8B9168442D4A233800A31AB6 /* NativeEngine.swift in Sources */,
+				8B9169F22D4A615600A31AB6 /* NetworkOperationHelper.swift in Sources */,
 				8B91679D2D4A233800A31AB6 /* NetworkReachabilityManager.swift in Sources */,
+				8B91694F2D4A5BBF00A31AB6 /* CheckMortality.swift in Sources */,
 				8B9167FF2D4A233800A31AB6 /* CoreDataContextObservable.swift in Sources */,
 				8B9168832D4A233800A31AB6 /* DynamicScaleCodingError.swift in Sources */,
 				8B9168CA2D4A233800A31AB6 /* KeystoreCommon.swift in Sources */,
@@ -2516,11 +2969,14 @@
 				8B91681A2D4A233800A31AB6 /* RepositoryObserver.swift in Sources */,
 				8B9169312D4A233900A31AB6 /* WebSocketConnectionFactory.swift in Sources */,
 				8B9167F52D4A233800A31AB6 /* AnyDataProviderSource.swift in Sources */,
+				8B9169DB2D4A615500A31AB6 /* CoreDataRepository+Protocol.swift in Sources */,
 				8B9168702D4A233800A31AB6 /* CompactNodeFactory.swift in Sources */,
 				8B9167B72D4A233800A31AB6 /* Random.swift in Sources */,
+				8B9169F62D4A615600A31AB6 /* CancellableCall.swift in Sources */,
 				8B9167DD2D4A233800A31AB6 /* SNSignatureVerifier.m in Sources */,
 				8B9167D92D4A233800A31AB6 /* SNKeypair.m in Sources */,
 				8B9168502D4A233800A31AB6 /* AddressQRDecoder.swift in Sources */,
+				8B9169582D4A5BD700A31AB6 /* RuntimeAugmentationFactory.swift in Sources */,
 				8B9168672D4A233800A31AB6 /* CallMetadataV14.swift in Sources */,
 				8B9167FB2D4A233800A31AB6 /* ClosureOperation.swift in Sources */,
 				8B9168842D4A233800A31AB6 /* DynamicScaleDecoder.swift in Sources */,

@@ -1,4 +1,5 @@
 import Foundation
+//import NovaCrypto
 //import IrohaCrypto
 
 public struct EcdsaKeypairFactory: DerivableSeedFactoryProtocol {
@@ -8,8 +9,10 @@ public struct EcdsaKeypairFactory: DerivableSeedFactoryProtocol {
 
     public init() {}
 
-    public func createKeypairFromSeed(_ seed: Data,
-                                      chaincodeList: [Chaincode]) throws -> IRCryptoKeypairProtocol {
+    public func createKeypairFromSeed(
+        _ seed: Data,
+        chaincodeList: [Chaincode]
+    ) throws -> IRCryptoKeypairProtocol {
         let childSeed = try deriveChildSeedFromParent(seed, chaincodeList: chaincodeList)
         let childPrivateKey = try SECPrivateKey(rawData: childSeed)
         return try internalFactory.derive(fromPrivateKey: childPrivateKey)
@@ -20,7 +23,7 @@ public struct EcdsaKeypairFactory: DerivableSeedFactoryProtocol {
         try Self.hdkdPrefix.encode(scaleEncoder: scaleEncoder)
         let prefix = scaleEncoder.encode()
 
-        return try chaincodeList.reduce(seed) { (currentSeed, chaincode) in
+        return try chaincodeList.reduce(seed) { currentSeed, chaincode in
             guard chaincode.type == .hard else {
                 throw KeypairFactoryError.unsupportedChaincodeType
             }

@@ -1,3 +1,4 @@
+//import NovaCrypto
 //import IrohaCrypto
 
 public class BIP32ExtendedKeypair {

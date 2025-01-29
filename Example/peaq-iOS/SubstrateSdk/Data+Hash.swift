@@ -1,5 +1,6 @@
 import Foundation
-
+//import xxHash_Swift
+//import NovaCrypto
 
 public extension Data {
     func blake128Concat() throws -> Data {

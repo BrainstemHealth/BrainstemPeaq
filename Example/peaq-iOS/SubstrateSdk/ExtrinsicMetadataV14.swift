@@ -1,5 +1,5 @@
 import Foundation
-
+//import BigInt
 
 public struct ExtrinsicMetadataV14 {
     public let type: SiLookupId
@@ -26,6 +26,8 @@ extension ExtrinsicMetadataV14: ScaleCodable {
         signedExtensions = try [SignedExtensionV14](scaleDecoder: scaleDecoder)
     }
 }
+
+extension ExtrinsicMetadataV14: PostV14ExtrinsicMetadataProtocol {}
 
 public struct SignedExtensionV14 {
     public let identifier: String
