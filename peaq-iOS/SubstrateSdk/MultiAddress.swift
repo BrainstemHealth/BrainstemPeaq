@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public enum MultiAddress: Equatable {
     static let accountIdField = "Id"

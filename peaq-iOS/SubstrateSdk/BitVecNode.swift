@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public enum BitVecNodeError: Error {
     case expectedArrayOfBools(json: JSON)

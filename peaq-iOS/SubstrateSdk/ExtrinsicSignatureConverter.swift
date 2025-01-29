@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public class ExtrinsicSignatureConverter {
     static let payloadHashingTreshold = 256

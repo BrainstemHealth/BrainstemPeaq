@@ -1,4 +1,5 @@
 import Foundation
+import Operation_iOS
 
 public final class HTTPEngine {
     struct Response {

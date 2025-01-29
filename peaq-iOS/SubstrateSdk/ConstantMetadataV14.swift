@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public struct ConstantMetadataV14 {
     public let name: String

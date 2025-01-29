@@ -1,14 +1,16 @@
 import Foundation
+import BigInt
 
+public extension ExtrinsicSignedExtension {
+    struct ChargeAssetTxPayment: Codable, OnlyExtrinsicSignedExtending {
+        public var signedExtensionId: String { Extrinsic.SignedExtensionId.assetTxPayment }
 
-public class ChargeAssetTxPayment: Codable, ExtrinsicExtension {
-    public static let name: String = "ChargeAssetTxPayment"
+        @StringCodable public var tip: BigUInt
+        @OptionStringCodable public var assetId: UInt32?
 
-    @StringCodable public var tip: BigUInt
-    @OptionStringCodable public var assetId: UInt32?
-
-    public init(tip: BigUInt = 0, assetId: UInt32? = nil) {
-        self.tip = tip
-        self.assetId = assetId
+        public init(tip: BigUInt = 0, assetId: UInt32? = nil) {
+            self.tip = tip
+            self.assetId = assetId
+        }
     }
 }

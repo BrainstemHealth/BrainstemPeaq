@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 extension BigUInt: LosslessStringConvertible {
     public init?(_ description: String) {

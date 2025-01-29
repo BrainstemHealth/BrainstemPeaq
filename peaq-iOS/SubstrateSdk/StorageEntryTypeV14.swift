@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public enum StorageEntryTypeV14 {
     case plain(_ value: SiLookupId)

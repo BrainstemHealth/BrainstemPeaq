@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 private struct EncodingThreshold {
     static let minUInt16: UInt = (1 << 6)

@@ -1,4 +1,5 @@
 import Foundation
+import Reachability
 
 public protocol ReachabilityListenerDelegate: AnyObject {
     func didChangeReachability(by manager: ReachabilityManagerProtocol)

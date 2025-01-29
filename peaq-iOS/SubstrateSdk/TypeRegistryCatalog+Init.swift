@@ -5,7 +5,7 @@ public extension TypeRegistryCatalog {
                                          versioningData: Data,
                                          runtimeMetadata: RuntimeMetadata,
                                          customNodes: [Node] = [],
-                                         customExtensions: [ExtrinsicExtensionCoder] = [])
+                                         customExtensions: [ExtrinsicSignedExtensionCoding] = [])
     throws -> TypeRegistryCatalog {
         let versionedJsons = try prepareVersionedJsons(from: versioningData)
 
@@ -22,7 +22,7 @@ public extension TypeRegistryCatalog {
         _ definitionData: Data,
         runtimeMetadata: RuntimeMetadata,
         customNodes: [Node] = [],
-        customExtensions: [ExtrinsicExtensionCoder] = []
+        customExtensions: [ExtrinsicSignedExtensionCoding] = []
     ) throws -> TypeRegistryCatalog {
         try createFromTypeDefinition(
             definitionData,
@@ -37,7 +37,7 @@ public extension TypeRegistryCatalog {
                                          versionedJsons: [UInt64: JSON],
                                          runtimeMetadata: RuntimeMetadata,
                                          customNodes: [Node],
-                                         customExtensions: [ExtrinsicExtensionCoder])
+                                         customExtensions: [ExtrinsicSignedExtensionCoding])
     throws -> TypeRegistryCatalog {
         let allNodes = BasisNodes.allNodes(for: runtimeMetadata, customExtensions: customExtensions)
         let additonalNodes = allNodes + customNodes
@@ -68,9 +68,29 @@ public extension TypeRegistryCatalog {
 
     static func createFromSiDefinition(
         versioningData: Data,
-        runtimeMetadata: RuntimeMetadataV14,
+        runtimeMetadata: PostV14RuntimeMetadataProtocol,
         additionalNodes: [Node] = [],
-        customExtensions: [ExtrinsicExtensionCoder] = [],
+        customExtensions: [ExtrinsicSignedExtensionCoding] = [],
+        customTypeMapper: SiTypeMapping? = nil,
+        customNameMapper: SiNameMapping? = nil
+    ) throws -> TypeRegistryCatalog {
+        let versionedJsons = try prepareVersionedJsons(from: versioningData)
+
+        return try createFromSiDefinition(
+            runtimeMetadata: runtimeMetadata,
+            versionedJsons: versionedJsons,
+            additionalNodes: additionalNodes,
+            customExtensions: customExtensions,
+            customTypeMapper: customTypeMapper,
+            customNameMapper: customNameMapper
+        )
+    }
+
+    static func createFromSiDefinition(
+        runtimeMetadata: PostV14RuntimeMetadataProtocol,
+        versionedJsons: [UInt64: JSON] = [:],
+        additionalNodes: [Node] = [],
+        customExtensions: [ExtrinsicSignedExtensionCoding] = [],
         customTypeMapper: SiTypeMapping? = nil,
         customNameMapper: SiNameMapping? = nil
     ) throws -> TypeRegistryCatalog {
@@ -81,8 +101,6 @@ public extension TypeRegistryCatalog {
             customTypeMapper: customTypeMapper,
             customNameMapper: customNameMapper
         )
-
-        let versionedJsons = try prepareVersionedJsons(from: versioningData)
 
         let versionedRegistries = try versionedJsons.mapValues {
             try TypeRegistry.createFromTypesDefinition(json: $0, additionalNodes: [])

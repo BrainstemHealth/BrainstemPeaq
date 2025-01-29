@@ -1,5 +1,6 @@
 import Foundation
-import IrohaCrypto
+import keccak
+import NovaCrypto
 
 public enum EthereumPubKeyToAddressError: Error {
     case invalidPublicKey

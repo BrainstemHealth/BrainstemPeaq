@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 extension Int8: ScaleEncodable {
     public func encode(scaleEncoder: ScaleEncoding) throws {

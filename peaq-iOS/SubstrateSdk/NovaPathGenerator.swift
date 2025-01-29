@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 /// To change the shape take your SVG file, take content of <shape d="..."> attribute
 /// convert it to paths using any online converter (for example, https://swiftvg.mike-engel.com)

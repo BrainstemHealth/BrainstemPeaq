@@ -1,5 +1,5 @@
 import UIKit
-
+import NovaCrypto
 
 private struct Scheme {
     let colors: [UInt]

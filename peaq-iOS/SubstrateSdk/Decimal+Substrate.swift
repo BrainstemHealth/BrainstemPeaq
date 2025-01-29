@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public extension Decimal {
     static var decimalToBigUIntHandler: NSDecimalNumberHandler {

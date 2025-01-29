@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public class DynamicScaleDecoder {
     private var decoder: ScaleDecoder

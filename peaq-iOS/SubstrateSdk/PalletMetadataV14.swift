@@ -28,6 +28,8 @@ public struct PalletMetadataV14 {
     }
 }
 
+extension PalletMetadataV14: PostV14PalletMetadataProtocol {}
+
 extension PalletMetadataV14: ScaleCodable {
     public func encode(scaleEncoder: ScaleEncoding) throws {
         try name.encode(scaleEncoder: scaleEncoder)

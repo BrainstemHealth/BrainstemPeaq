@@ -1,5 +1,5 @@
 import Foundation
-
+import BigInt
 
 public typealias SiLookupId = UInt32
 
@@ -44,9 +44,13 @@ public struct RuntimeType {
     }
 }
 
-extension RuntimeType {
+public extension RuntimeType {
     var pathBasedName: String? {
         !path.isEmpty ? path.joined(separator: ".") : nil
+    }
+
+    static func pathFromName(_ name: String) -> [String] {
+        name.components(separatedBy: ".")
     }
 }
 
