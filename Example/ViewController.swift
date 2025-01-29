@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import peaq_iOS
+//import peaq_iOS
 
 class ViewController: UIViewController {
     
