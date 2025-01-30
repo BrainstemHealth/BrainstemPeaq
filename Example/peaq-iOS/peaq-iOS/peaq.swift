@@ -178,16 +178,19 @@ public class peaq: NSObject {
             return signedData
         }
         
+        let encoder = DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion))
+        let encodingFactory = WrappedDynamicScaleEncoderFactory(encoder: encoder)
+      
         builder = try builder.signing(
             by: signingClosure,
             of: .sr25519,
-            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
+            using: encodingFactory,
             metadata: runtimeMetadata!
         )
         
         let extrinsic = try builder.build(
-          using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
-            metadata: runtimeMetadata!
+          using: encodingFactory,
+          metadata: runtimeMetadata!
         )
         
         let updateClosure: (ExtrinsicSubscriptionUpdate) -> Void = { update in
@@ -390,15 +393,18 @@ public class peaq: NSObject {
             return signedData
         }
         
+        let encoder = DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion))
+        let encodingFactory = WrappedDynamicScaleEncoderFactory(encoder: encoder)
+
         builder = try builder.signing(
             by: signingClosure,
             of: .sr25519,
-            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
+            using: encodingFactory,
             metadata: runtimeMetadata!
         )
         
         let extrinsic = try builder.build(
-          using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
+          using: encodingFactory,
             metadata: runtimeMetadata!
         )
         
@@ -708,6 +714,14 @@ public class peaq: NSObject {
                     customNameMapper: ScaleInfoCamelCaseMapper()
                 )
                 runtimeMetadata = metadata
+            case let .v15(metadata):
+              catalog = try TypeRegistryCatalog.createFromSiDefinition(
+                  versioningData: chainTypes,
+                  runtimeMetadata: metadata,
+                  customTypeMapper: SiDataTypeMapper(),
+                  customNameMapper: ScaleInfoCamelCaseMapper()
+              )
+              runtimeMetadata = metadata
             }
 
             return (runtimeVersion, runtimeMetadata, catalog)
