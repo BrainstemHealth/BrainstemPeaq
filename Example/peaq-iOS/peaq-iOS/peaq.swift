@@ -181,12 +181,12 @@ public class peaq: NSObject {
         builder = try builder.signing(
             by: signingClosure,
             of: .sr25519,
-            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)),
+            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
             metadata: runtimeMetadata!
         )
         
         let extrinsic = try builder.build(
-            encodingBy: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)),
+          using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
             metadata: runtimeMetadata!
         )
         
@@ -393,12 +393,12 @@ public class peaq: NSObject {
         builder = try builder.signing(
             by: signingClosure,
             of: .sr25519,
-            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)),
+            using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
             metadata: runtimeMetadata!
         )
         
         let extrinsic = try builder.build(
-            encodingBy: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)),
+          using: DynamicScaleEncoder(registry: catalog!, version: UInt64(runtimeVersion!.specVersion)) as! DynamicScaleEncodingFactoryProtocol,
             metadata: runtimeMetadata!
         )
         
