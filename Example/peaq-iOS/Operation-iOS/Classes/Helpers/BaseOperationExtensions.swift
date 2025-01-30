@@ -21,4 +21,8 @@ public extension BaseOperation {
             throw error
         }
     }
+  
+    func extractNoCancellableResultData() throws -> ResultType {
+      try extractResultData(throwing: BaseOperationError.parentOperationCancelled)
+  }
 }
