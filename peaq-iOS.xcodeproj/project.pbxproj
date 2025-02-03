@@ -1013,7 +1013,6 @@
 		8B9167772D4A233700A31AB6 /* XXH32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XXH32.swift; sourceTree = "<group>"; };
 		8B9167782D4A233700A31AB6 /* XXH64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XXH64.swift; sourceTree = "<group>"; };
 		8B9167792D4A233700A31AB6 /* xxHash-Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "xxHash-Common.swift"; sourceTree = "<group>"; };
-		8B91677B2D4A233700A31AB6 /* peaq_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peaq_iOS.h; sourceTree = "<group>"; };
 		8B9169452D4A5BBF00A31AB6 /* CheckTxVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTxVersion.swift; sourceTree = "<group>"; };
 		8B9169462D4A5BBF00A31AB6 /* CheckSpecVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSpecVersion.swift; sourceTree = "<group>"; };
 		8B9169472D4A5BBF00A31AB6 /* ChargeTransactionPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeTransactionPayment.swift; sourceTree = "<group>"; };
@@ -2041,7 +2040,6 @@
 				8B9167672D4A233700A31AB6 /* SubstrateSdk */,
 				8B9167722D4A233700A31AB6 /* TweetNacl */,
 				8B91677A2D4A233700A31AB6 /* xxHash-Swift */,
-				8B91677B2D4A233700A31AB6 /* peaq_iOS.h */,
 			);
 			path = "peaq-iOS";
 			sourceTree = "<group>";
