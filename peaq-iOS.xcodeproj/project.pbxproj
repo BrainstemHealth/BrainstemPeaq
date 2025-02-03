@@ -134,8 +134,6 @@
 		8B9167EF2D4A233800A31AB6 /* peaq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9165D12D4A233700A31AB6 /* peaq.swift */; };
 		8B9167F02D4A233800A31AB6 /* SubstrateAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9165D22D4A233700A31AB6 /* SubstrateAlias.swift */; };
 		8B9167F12D4A233800A31AB6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9165D42D4A233700A31AB6 /* Reachability.swift */; };
-		8B9167FC2D4A233800A31AB6 /* CompoundOperationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9165E02D4A233700A31AB6 /* CompoundOperationExtensions.swift */; };
-		8B9168132D4A233800A31AB6 /* NetworkIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9165F72D4A233700A31AB6 /* NetworkIndicatorManager.swift */; };
 		8B9168232D4A233800A31AB6 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B91660A2D4A233700A31AB6 /* asprintf.c */; };
 		8B9168242D4A233800A31AB6 /* crypto_scrypt_smix_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B91660C2D4A233700A31AB6 /* crypto_scrypt_smix_sse2.c */; };
 		8B9168252D4A233800A31AB6 /* crypto_scrypt_smix.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B91660E2D4A233700A31AB6 /* crypto_scrypt_smix.c */; };
@@ -682,8 +680,6 @@
 		8B9165D12D4A233700A31AB6 /* peaq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = peaq.swift; sourceTree = "<group>"; };
 		8B9165D22D4A233700A31AB6 /* SubstrateAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstrateAlias.swift; sourceTree = "<group>"; };
 		8B9165D42D4A233700A31AB6 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		8B9165E02D4A233700A31AB6 /* CompoundOperationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundOperationExtensions.swift; sourceTree = "<group>"; };
-		8B9165F72D4A233700A31AB6 /* NetworkIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkIndicatorManager.swift; sourceTree = "<group>"; };
 		8B9166082D4A233700A31AB6 /* scrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrypt.h; sourceTree = "<group>"; };
 		8B91660A2D4A233700A31AB6 /* asprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asprintf.c; sourceTree = "<group>"; };
 		8B91660B2D4A233700A31AB6 /* asprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asprintf.h; sourceTree = "<group>"; };
@@ -1556,15 +1552,6 @@
 			path = ReachabilitySwift;
 			sourceTree = "<group>";
 		};
-		8B9166072D4A233700A31AB6 /* RobinHood */ = {
-			isa = PBXGroup;
-			children = (
-				8B9165E02D4A233700A31AB6 /* CompoundOperationExtensions.swift */,
-				8B9165F72D4A233700A31AB6 /* NetworkIndicatorManager.swift */,
-			);
-			path = RobinHood;
-			sourceTree = "<group>";
-		};
 		8B9166092D4A233700A31AB6 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -2048,7 +2035,6 @@
 				8B9165C12D4A233700A31AB6 /* keccak.c */,
 				8B9165D32D4A233700A31AB6 /* peaq-iOS */,
 				8B9165D52D4A233700A31AB6 /* ReachabilitySwift */,
-				8B9166072D4A233700A31AB6 /* RobinHood */,
 				8B91663A2D4A233700A31AB6 /* scrypt.c */,
 				8B91666A2D4A233700A31AB6 /* secp256k1.c */,
 				8B91667F2D4A233700A31AB6 /* Starscream */,
@@ -2689,7 +2675,6 @@
 				8B9167A62D4A233800A31AB6 /* Alamofire.swift in Sources */,
 				8B9168EE2D4A233800A31AB6 /* Result+Scale.swift in Sources */,
 				8B9168992D4A233800A31AB6 /* ExtrinsicExtraNode.swift in Sources */,
-				8B9167FC2D4A233800A31AB6 /* CompoundOperationExtensions.swift in Sources */,
 				8B91689F2D4A233800A31AB6 /* ExtrinsicSignatureNode.swift in Sources */,
 				8B9168922D4A233800A31AB6 /* EventMetadataV14.swift in Sources */,
 				8B916A642D4B181D00A31AB6 /* NetworkRequestModifier.swift in Sources */,
@@ -2767,7 +2752,6 @@
 				8B9169162D4A233900A31AB6 /* SubstrateQRCommon.swift in Sources */,
 				8B916A502D4B181D00A31AB6 /* AnySingleValueProviderSource.swift in Sources */,
 				0487F7C72B5141C4001956FC /* SceneDelegate.swift in Sources */,
-				8B9168132D4A233800A31AB6 /* NetworkIndicatorManager.swift in Sources */,
 				8B91677D2D4A233800A31AB6 /* AFError.swift in Sources */,
 				8B9169072D4A233900A31AB6 /* SR25519KeypairFactory.swift in Sources */,
 				8B91685D2D4A233800A31AB6 /* BIP32KeyFactory.swift in Sources */,
